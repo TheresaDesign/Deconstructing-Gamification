@@ -16,6 +16,8 @@
     --grey2: #AFAFAF;
     --grey3: #e5e5e5;
     --grey4: #f7f7f7;
+
+    --font: Nunito;
   }
 
 
@@ -28,7 +30,7 @@
   }
   
   @font-face {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -93,4 +95,26 @@ article{
     font-weight: 400;
     font-size: 18px;
     color: var(--of_Black);
+}
+
+
+main{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+header{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: flex-end;
+}
+
+button{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 15px;
+    text-transform: lowercase;
+    border-radius: 8px;
 }
