@@ -1,0 +1,96 @@
+:root {
+    /*main colors*/
+    --green_dark: #58cc02;
+    --green_light: #89e219;
+    --of_Black: #4b4b4b;
+    --white: #FFFFFF;
+    /*secondary colors*/
+    --blue: #1cb0f6;
+    --red: #ff4b4b;
+    --yellow: #ffc800;
+    --orange: #ff9600;
+    --purple: #ce82ff;
+    --darkblue: #2b70c9;
+    /*neutrals colors*/
+    --grey1: #777777;
+    --grey2: #AFAFAF;
+    --grey3: #e5e5e5;
+    --grey4: #f7f7f7;
+  }
+
+
+@font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('Nunito/Nunito-Light.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/Assets/Nunito/ttf/Nunito-Regular.ttf') format('truetype'),
+    url('/Assets/Nunito/woff/Nunito-Regular.woff') format('woff')
+    ;
+  }
+
+  @font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('Nunito/Nunito-Medium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('Nunito/Nunito-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('Nunito/Nunito-ExtraBold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url('.../Nunito/Nunito-MediumItalic.ttf') format('truetype');
+  }
+  
+h1{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+h2{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    text-transform: lowercase;
+    font-size: 41px;
+}
+
+h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    text-transform: lowercase;
+    font-size: 27px;
+}
+
+article{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--of_Black);
+}
