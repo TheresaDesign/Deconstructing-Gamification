@@ -83,10 +83,14 @@ h2{
 }
 
 h3{
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-    text-transform: lowercase;
-    font-size: 27px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  text-transform: lowercase;
+  font-size: 27px;
+}
+
+#bold{
+  font-weight: 700;
 }
 
 main{
