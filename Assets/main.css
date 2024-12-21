@@ -117,19 +117,34 @@ section{
   flex-basis: 100%;
 }
 
-.button-big{
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
-    font-size: 13px;
-    padding: 8px 15px;
-    text-transform: lowercase;
-    border-radius: 8px;
-    background-color: var(--green_light);
-    color: var(--white);
-    border: none;
-    box-shadow: 0px 5px 0px 0px var(--green_dark);
+.button-big {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 13px;
+  padding: 8px 15px;
+  text-transform: lowercase;
+  border-radius: 8px;
+  background-color: var(--green_light); 
+  color: var(--white);
+  border: none;
+  box-shadow: 0px 5px 0px 0px var(--green_dark);
+  text-decoration: none; 
+  display: inline-block; 
+  cursor: pointer;
 }
 
+.button-big:hover {
+  background-color: var(--green_dark); 
+  box-shadow: 0px 5px 0px 0px var(--green_light);
+  color: var(--grey4);
+}
+.button-big:active {
+  background-color: var(--white); 
+  box-shadow: 0px 2px 0px 0px var(--green_light); 
+  color: var(--green_light);
+  border: 1px solid var(--green_light);
+  transform: translateY(3px); /* Visueller "Klick-Effekt" */
+}
 .source{
   font-weight: 900;
   font-style: italic;
