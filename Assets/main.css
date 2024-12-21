@@ -20,7 +20,7 @@
     --font: Nunito;
   }
 
-
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:wght@600&family=Rokkitt:wght@266;400;600&display=swap');
 @font-face {
     font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
@@ -30,10 +30,9 @@
   }
   
   @font-face {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
     src: url('/Assets/Nunito/ttf/Nunito-Regular.ttf') format('truetype'),
     url('/Assets/Nunito/woff/Nunito-Regular.woff') format('woff')
     ;
@@ -90,33 +89,38 @@ h3{
     font-size: 27px;
 }
 
-article{
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: var(--of_Black);
-}
-
-
 main{
     display: flex;
     max-width: 1200px;
     margin: auto;
     padding: 0;
+    height: auto;
+    flex-direction: column;
 }
 header{
     display: flex;
     flex-basis: 100%;
     justify-content: flex-end;
     margin-top: 20px;
-    position: fixed;
-    flex-shrink: 0;
+    position: sticky;
 }
 
-button{
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
+article{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--of_Black);
+  width: 50%;
+}
+
+section{
+  flex-basis: 100%;
+}
+
+.button-big{
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-size: 13px;
     padding: 8px 15px;
     text-transform: lowercase;
     border-radius: 8px;
@@ -124,6 +128,39 @@ button{
     color: var(--white);
     border: none;
     box-shadow: 0px 5px 0px 0px var(--green_dark);
+}
+
+.source{
+  font-weight: 900;
+  font-style: italic;
+  cursor: pointer;
+}
+#source{
+  color: var(--green_dark);
+}
+.popup {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 2px solid var(--grey2);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2px 30px;
+  border-radius: 4px;
+  z-index: 1000;
+  top: 139px;
+  left: 95px;
+}
+
+.popup .close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  font-family: "Nunito";
+  color: var(--grey2);
+  font-size: 16px;
 }
 
 #scrolly{
