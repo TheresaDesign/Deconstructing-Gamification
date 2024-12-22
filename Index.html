@@ -8,12 +8,14 @@
     
 </head>
 <body>
-    <main>
+    <section id="intro_content">
         <header>
             <a href="about.html" class="button-big">About the project</a>
         </header>
-
-        <section id="intro">
+    </section>
+    
+    <div id="intro">
+        <section id="intro_content">
             <h2>understanding gamification</h2>
             <article >
                 <p>Gamification refers to the use of game design elements and principles in non-game contexts to motivate, engage and influence behavior. By incorporating components such as points, badges, leaderboards, challenges and rewards, gamification draws on different types of motivation to make everyday tasks more engaging and enjoyable.</p>
@@ -23,40 +25,109 @@
                 <p>In the following sections, we will explore the basic concepts of gamification, its psychological underpinnings and its specific applications in Duolingo to understand exactly how learning with gamification works, but also how it may not work in some instances or may even have the opposite effect</p>
             </article>
         </section>
+        
+    </div>
+    <main>
+        
 
-        <section>
-            <h2>psychology</h2>
+        <section id="scrolly">
             <article>
-                <p>Gamification is highly effective across various domains because it activates a wide range of psychological mechanisms. By breaking down information into smaller, manageable pieces, it becomes easier to process. Learning content is made more engaging, and knowledge retention is enhanced through immediate feedback. <span class="source" onclick="togglePopup()">Studies show <sup>2</sup></span> that gamification in educational applications can improve memory performance by up to 40%.</p>
-                <p>Let us now examine the principles behind gamification and the game elements through which they are applied.</p>
-                <div id="popup" class="popup">
-                    <a href="https://www.zippia.com/advice/gamification-statistics/" target="_blank" id="source">View source</a>
-                    <button class="close-btn" onclick="togglePopup()">X</button>
+                <div class="step" data-step="1">
+                    <div>
+                            <h2>psychology</h2>
+                        <p>Gamification is highly effective across various domains because it activates a wide range of psychological mechanisms. By breaking down information into smaller, manageable pieces, it becomes easier to process. Learning content is made more engaging, and knowledge retention is enhanced through immediate feedback. <span class="source" onclick="togglePopup()">Studies show <sup>2</sup></span> that gamification in educational applications can improve memory performance by up to 40%.</p>
+                        <p>Let us now examine the principles behind gamification and the game elements through which they are applied.</p>
+                        <div id="popup" class="popup">
+                        <a href="https://www.zippia.com/advice/gamification-statistics/" target="_blank" id="source">View source</a>
+                        <button class="close-btn" onclick="togglePopup()">X</button>
+                        </div>
                     </div>
-            </article>
-                <h3>Psychological principles</h3>
-                <article>
-                    In the following, we will introduce you to four psychological principles that are used in gamification:
-                </article>
-               <div class="sticky">
+                </div>
 
-               </div>
-                <article>
-                    <p id="bold">Operant conditioning</p>
-                    <p>Here, a certain behavior is encouraged or suppressed by working with rewards or punishments. This form of conditioning can be found in Duolingo in the form of streaks, rewards after completing a task, completing quests or badges, advancement in leagues, etc. Operant conditioning is one of the methods most commonly used by Duolingo.</p>
-                    <p>In principle, conditioning can also go in the negative direction, which is admittedly used less frequently in gamification, as there is a risk of reduced engagement. The removal of aversive states (a state that is perceived as unpleasant and that you want to avoid or end) could be seen as a kind of middle ground. Punishment is too harsh in its execution and could demotivate the user too much. The aversive states, on the other hand, work with negative reinforcement. This feeling can be found, for example, when the user is afraid of losing their streak, losing their place in the league or when the level time is running out.</p>
-                    </article>
-            
-            
-            
+                <div class="step" data-step="2">
+                    <div>
+                        <h3>Psychological principles</h3>
+                        <p>In the following, we will introduce you to four psychological principles that are used in gamification:</p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="3">
+                    <div>
+                        <p id="bold">Operant conditioning</p>
+                        <p>Here, a certain behavior is encouraged or suppressed by working with rewards or punishments. This form of conditioning can be found in Duolingo in the form of streaks, rewards after completing a task, completing quests or badges, advancement in leagues, etc. Operant conditioning is one of the methods most commonly used by Duolingo.</p>
+                        <p>In principle, conditioning can also go in the negative direction, which is admittedly used less frequently in gamification, as there is a risk of reduced engagement. The removal of aversive states (a state that is perceived as unpleasant and that you want to avoid or end) could be seen as a kind of middle ground. Punishment is too harsh in its execution and could demotivate the user too much. The aversive states, on the other hand, work with negative reinforcement. This feeling can be found, for example, when the user is afraid of losing their streak, losing their place in the league or when the level time is running out.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="4">
+                    <div>
+                        <p id="bold">Dopamin Release</p>
+                        <p>The dopamine release is a discharge of the happiness hormone in our brain. In everyday life, this can happen through food, a hug, exercise, drug use, social media and much more, but also through rewards, level ups or reaching a new league in Duolingo. The brain always wants more dopamine, so the gems you get at the end of a level are not just a reward to the player, but the brain is happy about the renewed dopamine release.</p>
+                    </div>
+                    
+                </div>
+
+                <div class="step" data-step="5">
+                    <div>
+                        <p id="bold">Flow Theory</p>
+                        <p>Attention is a limited resource that is becoming increasingly scarce in today's world. People are not able to absorb and process all the information in their environment. Emotional stimuli, on the other hand, have a special status as they are more likely to be perceived (especially those that trigger fear and threat) and can also be processed subconsciously. The brain region that processes emotions (amygdala) can influence the area responsible for vision (visual cortex) in such a way that emotional stimuli can trigger effects similar to targeted attention.</p>
+                        <p>This close connection between emotions and attention plays a crucial role in achieving a state of flow. Flow describes the intense immersion in an activity that is promoted by focused attention and emotional involvement.  Flow is divided into three stages: </p>
+                        <p>Engagement: initial attraction and investment in a task or game.</p>
+                        <p>Engrossment: Deepening, in which attention becomes closer and emotional involvement increases.</p>
+                        <p>Total immersion: Complete immersion that is associated with presence and empathy.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="6">
+                    <div>
+                        <p id="bold">Self-Determination Theory (SDT)</p>
+                    <p>This theory by psychologists Edward Deci and Richard Ryan states that people are naturally motivated to develop and overcome challenges. According to this theory, there are three basic psychological needs that must be met for people to feel motivated, satisfied and mentally healthy:</p>
+                    <p>Autonomy: control over one's own learning. (Gamification: players can often design their own learning path or activities)</p>
+                    <p>Competence: Sense of progress through levels and badges. (Gamification: progress (e.g. levels, badges) and challenges motivate through the feeling of getting better)
+                    </p>
+                    <p>Social inclusion: Comparison with friends and community features. (Gamification: Elements such as leaderboards, teams or community interactions promote a sense of belonging).
+                    </p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="7">
+                    <div>
+                        <h3>Psychological principles</h3>
+                        <p>There are different types of motivation, which also play a role in the aforementioned self-determination theory. A distinction is made between intrinsic and extrinsic motivation. </p>
+                        <p>Intrinsic motivation comes from within, i.e. people act out of their own interest. It arises when the three basic needs of SDT are satisfied. With extrinsic motivation, a person acts in order to receive rewards or to avoid punishment. They do not do it out of their own desire. 
+                        </p>
+                        <p>Duolingo makes use of both types of motivation, which makes gamification even more effective. The app satisfies the three basic needs mentioned and thus creates an intrinsic motivation in the user to continue. While playing or learning, it is not uncommon to receive rewards in the form of diamonds (gems) and power-ups. The fact that the streak does not end and you lose your place on the list also promotes extrinsic motivation.
+                        </p>
+                        <p>In our analysis, we found that Duolingo relies more heavily on extrinsic motivation. Elements such as autonomy and competence are addressed, but often not deeply enough to ensure sustainable intrinsic motivation.
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="step" data-step="8">
+                    <div>
+                        <p>In order to increase intrinsic motivation, Duolingo could make learning more individual, for example by offering personalized content (e.g. Babbel), or by making progress visible in other ways than just through XP. For example, through actual learning and language levels. For social connections, language partners or collaborative exercises would be conceivable.</p>
+                        <p>Strengthening intrinsic motivation would also be a good approach in any case, as a focus on extrinsic motivation can lead to problems, as we will discuss in the following chapter, among others
+                    </p>
+                    </div>
+                </div>
+                
+            </article>
+
+            <figure>
+				<p>0</p>
+			</figure>
+
         </section>
     
         <footer>
 
         </footer>
     </main>
+    <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
     <script src="Assets/scrollama.min.js"></script>
     <script src="Assets/JavaScript/basic.js"></script>
+    <script src="Assets/JavaScript/psychology.js"></script>
     
 </body>
 </html>

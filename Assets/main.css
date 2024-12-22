@@ -1,14 +1,14 @@
 :root {
     /*main colors*/
-    --green_dark: #58cc02;
+    --green_dark: #58cc02; /*intro*/
     --green_light: #89e219;
     --of_Black: #4b4b4b;
     --white: #FFFFFF;
     /*secondary colors*/
     --blue: #1cb0f6;
-    --red: #ff4b4b;
+    --red: #ff4b4b; /*negative*/
     --yellow: #ffc800;
-    --orange: #ff9600;
+    --orange: #ff9600;/*psychology*/
     --purple: #ce82ff;
     --darkblue: #2b70c9;
     /*neutrals colors*/
@@ -101,6 +101,10 @@ h3{
   font-weight: 700;
 }
 
+body{
+  padding: 0;
+  margin: 0;
+}
 main{
     display: flex;
     max-width: 1200px;
@@ -114,22 +118,32 @@ header{
     width: 100%;
     max-width: 1200px;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: 70px;
     position: fixed;
+    z-index: 1000;
 }
 
+
+
 #intro{
+  background-color: var(--grey4);
+}
+
+#intro_content{
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--grey3);
+  max-width: 1200px;
 }
+
 article{
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: var(--of_Black);
   width: 50%;
+  position: relative;
 }
 
 section{
@@ -197,6 +211,59 @@ section{
   top: 5px;
 }
 
-#scrolly{
-  position: absolute;
+
+/*SCROLLYTELLING*/
+#scrolly {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
+
+#scrolly>* {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.step div {
+  position: sticky; /* Sticky innerhalb von .step */
+  top: 20%; /* Startpunkt beim Scrollen */
+}
+figure {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  margin: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-color: #8a8a8a;
+  z-index: 0;
+}
+
+figure p {
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 900;
+  color: #fff;
+}
+.step{
+  position: relative;
+  margin-top: 120px;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step.is-active {
+  /*background-color: var(--yellow);*/
+}
+
