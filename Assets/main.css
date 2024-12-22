@@ -95,6 +95,7 @@ h3{
   font-weight: 900;
   text-transform: lowercase;
   font-size: 27px;
+  margin: 0;
 }
 
 #bold{
@@ -123,11 +124,31 @@ header{
     z-index: 1000;
 }
 
-/* Allgemeines Styling 
+.chapter-intro {
+  background-color: var(--green_light); /* Tomato */
+}
+
+.chapter-psychology {
+  background-color: var(--orange); /* Steel Blue */
+}
+
+.chapter-elements {
+  background-color: #32cd32; /* Lime Green */
+}
+
+.chapter-case {
+  background-color: #ffa500; /* Orange */
+}
+
+.chapter-conclusion {
+  background-color: #8a2be2; /* Blue Violet */
+}
+
 .chapter-menu {
   position: fixed;
   top: 50%;
-  left: 10%;
+  left: 91%;
+  z-index: 1;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -140,54 +161,57 @@ header{
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Abstand zwischen den Punkten 
+  gap: 20px; 
+  align-items: center;
 }
 
 .chapter-point {
   position: relative;
   width: 16px;
   height: 16px;
-  background-color: var(--grey2);
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Wenn ein Kapitel aktiv ist 
-.chapter-point.active {
-  background-color: var(--blue);
+.chapter-point.visited {
 }
 
-/* Hover-Effekt 
+.chapter-point.active {
+  outline: 3px solid var(--blue); /* Beispiel für ein visuelles Highlight */
+  width: 25px;
+  height: 25px;
+}
+
 .chapter-point:hover {
   background-color: var(--yellow);
-  transform: scale(1.2); /* Vergrößerung beim Hover 
+  transform: scale(1.2); 
 }
-
-/* Tooltip für Titel 
+ 
 .chapter-point::after {
   content: attr(data-title);
   position: absolute;
-  left: 25px;
+  left: -100px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--dark-grey);
-  color: var(--white);
-  font-size: 12px;
+  background-color: var(--grey4);
+  color: var(--green_light);
+  box-shadow: 0px 5px 0px 0px var(--green_dark);
+  font-size: 13px;
+  font-family: "Nunito";
   padding: 4px 8px;
+  border: 1px solid var(--green_dark);
   border-radius: 4px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
 }
 
-/* Tooltip sichtbar beim Hover 
 .chapter-point:hover::after {
   opacity: 1;
-}*/
+}
 
-
-#intro{
+#intro-box{
   background-color: var(--grey4);
   padding: 100px 0;
 }
@@ -335,3 +359,23 @@ figure p {
   /*background-color: var(--yellow);*/
 }
 
+footer{
+  background-color: var(--green_dark);
+  color: var(--white);
+  width: 100%;
+}
+
+.footer-container{
+  display: flex;
+  margin: auto;
+  padding: 0;
+  max-width: 1200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer-content{
+  flex-basis: 50%;
+  font-family: "Nunito";
+  flex-grow: 0;
+  flex-shrink: 0;
+}

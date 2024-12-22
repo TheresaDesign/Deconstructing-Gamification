@@ -9,17 +9,23 @@ function togglePopup() {
   
 //menu
 
-  const chapters = document.querySelectorAll(".chapter-point");
+const chapters = document.querySelectorAll(".chapter-point");
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       const index = Array.from(sections).indexOf(entry.target);
+
       if (entry.isIntersecting) {
-        chapters.forEach((chapter) => chapter.classList.remove("active"));
+        // Füge die Klasse "active" hinzu, um den aktuellen Punkt zu markieren
         if (chapters[index]) {
           chapters[index].classList.add("active");
+        }
+
+        // Setze für alle vorherigen Punkte die aktive Farbe, falls sie noch nicht aktiv sind
+        for (let i = 0; i <= index; i++) {
+          chapters[i].classList.add("visited"); // Hinzufügen, wenn bereits durchgescrollt
         }
       }
     });
@@ -28,3 +34,4 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+

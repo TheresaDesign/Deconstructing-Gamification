@@ -16,16 +16,19 @@
 
     <nav class="chapter-menu">
         <ul>
-          <li data-title="Introduction" class="chapter-point active"></li>
-          <li data-title="Psychology" class="chapter-point"></li>
-          <li data-title="Gamification Elements" class="chapter-point"></li>
-          <li data-title="Case Studies" class="chapter-point"></li>
-          <li data-title="Conclusion" class="chapter-point"></li>
+          <li data-title="Introduction" class="chapter-point chapter-intro"></li>
+          <li data-title="Deconstructing the Interface" class="chapter-point chapter-deconstruct"></li>
+          <li data-title="Gamification Elements" class="chapter-point chapter-elements"></li>
+          <li data-title="Psychology" class="chapter-point chapter-psychology"></li>
+          <li data-title="Critical Points" class="chapter-point chapter-critic"></li>
+          <li data-title="Individual feelings" class="chapter-point chapter-feedback"></li>
+          <li data-title="Closing" class="chapter-point chapter-close"></li>
         </ul>
-    </nav>
+      </nav>
+      
     
-    <div id="intro">
-        <section id="intro_content">
+    <div id="intro-box">
+        <section id="intro_content" id="intro">
             <h2 class="text-center">understanding gamification</h2>
             <article class="text-center">
                 <p>Gamification refers to the use of game design elements and principles in non-game contexts to motivate, engage and influence behavior. By incorporating components such as points, badges, leaderboards, challenges and rewards, gamification draws on different types of motivation to make everyday tasks more engaging and enjoyable.</p>
@@ -40,7 +43,7 @@
     <main>
         
 
-        <section id="scrolly">
+        <section id="scrolly" id="psychology">
             <article>
                 <div class="step" data-step="1">
                     <div>
@@ -129,11 +132,21 @@
 			</figure>
 
         </section>
-    
-        <footer>
-
-        </footer>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Imprint</h3>
+                <p>Concept:</p>
+                <p>Development:</p>
+                <p>Research:</p>
+            </div>
+            <div class="footer-content">
+                <img src="Assets/imgs/Logo/image copy.png" alt="Logo Fachhochschule Potsdam" style="width: 50%;">
+                <p style="border-top: 1px solid var(--white); padding-top: 20px;">This project was developed as part of the seminar „Deconstructing User Interfaces“ led by Francesca Morini in the winter semester 2024/2025 at the University of Applied Sciences Potsdam.</p>
+            </div>
+        </div>
+    </footer>
     <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
     <script src="Assets/scrollama.min.js"></script>
     <script src="Assets/JavaScript/basic.js"></script>
