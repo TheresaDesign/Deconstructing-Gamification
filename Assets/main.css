@@ -123,10 +123,73 @@ header{
     z-index: 1000;
 }
 
+/* Allgemeines Styling 
+.chapter-menu {
+  position: fixed;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chapter-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Abstand zwischen den Punkten 
+}
+
+.chapter-point {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: var(--grey2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Wenn ein Kapitel aktiv ist 
+.chapter-point.active {
+  background-color: var(--blue);
+}
+
+/* Hover-Effekt 
+.chapter-point:hover {
+  background-color: var(--yellow);
+  transform: scale(1.2); /* Vergrößerung beim Hover 
+}
+
+/* Tooltip für Titel 
+.chapter-point::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--dark-grey);
+  color: var(--white);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* Tooltip sichtbar beim Hover 
+.chapter-point:hover::after {
+  opacity: 1;
+}*/
 
 
 #intro{
   background-color: var(--grey4);
+  padding: 100px 0;
 }
 
 #intro_content{
@@ -144,6 +207,11 @@ article{
   color: var(--of_Black);
   width: 50%;
   position: relative;
+}
+
+.text-center{
+  flex-basis: 50%;
+  margin: 0 auto;
 }
 
 section{
