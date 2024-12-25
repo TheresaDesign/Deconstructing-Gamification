@@ -303,8 +303,33 @@ section{
   top: 5px;
 }
 
+/*Scrollytelling Rad*/
+.wheel {
+  position: fixed;
+  left: -50px; /* Damit es seitlich abgeschnitten ist */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 300px;
+}
+.cls-2 {
+  fill: rgb(255, 0, 0);
+  transition: transform 0.3s, fill 0.3s;
+}
+.cls-2.active {
+  fill: orange;
+  transform: scale(1.2); /* Vergrößert das aktive Stück */
+}
+.text-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
 
-/*SCROLLYTELLING*/
+
+/*SCROLLYTELLING Psychology*/
 #scrolly {
   position: relative;
   display: -webkit-box;
