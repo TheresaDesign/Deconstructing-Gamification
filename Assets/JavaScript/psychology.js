@@ -15,7 +15,8 @@ function handleResize() {
     step.style("height", stepH + "px");
 
     var figureHeight = window.innerHeight / 1.5;
-    var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+    // Setze den top-Wert auf 25% der Fensterhöhe
+    var figureMarginTop = window.innerHeight * 0.25;
 
     figure
         .style("height", figureHeight + "px")
@@ -24,6 +25,7 @@ function handleResize() {
     // 3. tell scrollama to update new element dimensions
     scroller.resize();
 }
+
 // scrollama event handlers
 function handleStepEnter(response) {
     console.log(response);
