@@ -124,29 +124,9 @@ header{
     z-index: 1000;
 }
 
-.chapter-intro {
-  background-color: var(--green_light); /* Tomato */
-}
-
-.chapter-psychology {
-  background-color: var(--orange); /* Steel Blue */
-}
-
-.chapter-elements {
-  background-color: #32cd32; /* Lime Green */
-}
-
-.chapter-case {
-  background-color: #ffa500; /* Orange */
-}
-
-.chapter-conclusion {
-  background-color: #8a2be2; /* Blue Violet */
-}
-
 .chapter-menu {
   position: fixed;
-  top: 50%;
+  top: 45%;
   left: 91%;
   z-index: 1;
   transform: translateY(-50%);
@@ -161,30 +141,45 @@ header{
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 35px; 
   align-items: center;
+  position: relative;
+}
+
+.chapter-menu ul::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Horizontale Ausrichtung */
+  left: 50%; /* Linksbündigkeit sicherstellen */
+  transform: translate(-50%, -50%);
+  width: 2px; /* Dicke der Linie */
+  height: 100%; /* Linie erstreckt sich über alle Punkte */
+  background-color: var(--grey2); /* Farbe der Linie */
+  z-index: -1; /* Linie hinter die Punkte legen */
 }
 
 .chapter-point {
   position: relative;
   width: 16px;
   height: 16px;
+  background-color: var(--grey2);
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+
 .chapter-point.visited {
+  background-color: var(--chapter-color);
 }
 
 .chapter-point.active {
-  outline: 3px solid var(--blue); /* Beispiel für ein visuelles Highlight */
-  width: 25px;
+  width: 25px; 
   height: 25px;
 }
 
 .chapter-point:hover {
-  background-color: var(--yellow);
+  background-color: var(--chapter-color);
   transform: scale(1.2); 
 }
  
@@ -205,10 +200,36 @@ header{
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
+  text-align: center;
+  max-width: 70px;
 }
 
 .chapter-point:hover::after {
   opacity: 1;
+}
+
+.chapter-intro.visited {
+  background-color: var(--green_light); /* Tomato */
+}
+
+.chapter-elements.visited {
+  background-color: var(--yellow); /* Lime Green */
+}
+
+.chapter-elements.visited {
+  background-color: var(--purple); /* Lime Green */
+}
+
+.chapter-psychology.visited {
+  background-color: var(--orange); /* Steel Blue */
+}
+
+.chapter-case.visited {
+  background-color: #ffa500; /* Orange */
+}
+
+.chapter-conclusion.visited {
+  background-color: #8a2be2; /* Blue Violet */
 }
 
 #intro-box{

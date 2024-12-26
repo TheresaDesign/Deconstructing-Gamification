@@ -16,22 +16,25 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       const index = Array.from(sections).indexOf(entry.target);
+      const chapter = chapters[index];
 
       if (entry.isIntersecting) {
-        // Füge die Klasse "active" hinzu, um den aktuellen Punkt zu markieren
-        if (chapters[index]) {
-          chapters[index].classList.add("active");
+        // Aktivieren des aktuellen Kapitels
+        chapters.forEach((c) => c.classList.remove("active"));
+        chapter.classList.add("active", "visited");
+      } else {
+        // Entfernen von "visited", wenn man zurückscrollt
+        if (entry.boundingClientRect.top > 0) {
+          chapter.classList.remove("visited");
         }
-
-        // Setze für alle vorherigen Punkte die aktive Farbe, falls sie noch nicht aktiv sind
-        for (let i = 0; i <= index; i++) {
-          chapters[i].classList.add("visited"); // Hinzufügen, wenn bereits durchgescrollt
-        }
+        chapter.classList.remove("active");
       }
     });
   },
-  { threshold: 0.5 } // Aktiviert, wenn 50% der Section im Viewport sind
+  { threshold: 0.5 } // Aktiviert bei 50% Sichtbarkeit des Abschnitts
 );
 
+// Beobachten aller Abschnitte
 sections.forEach((section) => observer.observe(section));
+
 
