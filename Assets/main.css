@@ -326,6 +326,7 @@ section{
 
 /*Scrollytelling Rad*/
 .wheel {
+  display: none;
   position: fixed;
   left: -50px; /* Damit es seitlich abgeschnitten ist */
   top: 50%;

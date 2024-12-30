@@ -16,7 +16,7 @@ step.style("height", stepH + "px");
 
 var figureHeight = window.innerHeight / 1.5;
 // Setze den top-Wert auf 25% der Fensterhöhe
-var figureMarginTop = window.innerHeight * 0.25;
+var figureMarginTop = window.innerHeight * 0.08;
 
 figure
     .style("height", figureHeight + "px")

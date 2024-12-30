@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1024 1280">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke: #e5e5e5;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .st0, .st1 {
+        fill: #fff;
+      }
+
+      .st1 {
+        font-family: Nunito-Black, Nunito;
+        font-size: 39px;
+        font-weight: 800;
+      }
+
+      .st2 {
+        fill: #ff9600;
+        filter: url(#drop-shadow-1);
+      }
+
+      .st3 {
+        fill: #e5e5e5;
+        font-family: Nunito-Medium, Nunito;
+        font-size: 36px;
+        font-weight: 500;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="211.4" y="201.4" width="531.2" height="135" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="14.2"/>
+      <feGaussianBlur result="blur" stdDeviation="0"/>
+      <feFlood flood-color="#ff7900" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="st0" x="211.4" y="365.7" width="531.2" height="105.5" rx="28.3" ry="28.3"/>
+  <rect class="st0" x="211.4" y="497.5" width="531.2" height="105.5" rx="28.3" ry="28.3"/>
+  <text class="st3" transform="translate(309.5 428.8)"><tspan x="0" y="0">operant conditioning</tspan></text>
+  <text class="st3" transform="translate(342.4 560.7)"><tspan x="0" y="0">dopamin release</tspan></text>
+  <rect class="st0" x="211.4" y="629.4" width="531.2" height="105.5" rx="28.3" ry="28.3"/>
+  <text class="st3" transform="translate(383.2 692.5)"><tspan x="0" y="0">flow theory</tspan></text>
+  <rect class="st0" x="211.4" y="761.2" width="531.2" height="105.5" rx="28.3" ry="28.3"/>
+  <text class="st3" transform="translate(269 824.3)"><tspan x="0" y="0">self-determination theory</tspan></text>
+  <rect class="st2" x="211.4" y="201.4" width="531.2" height="120.8" rx="28.3" ry="28.3"/>
+  <text class="st1" transform="translate(257.6 277.9)"><tspan x="0" y="0">psychological principles</tspan></text>
+</svg>
