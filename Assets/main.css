@@ -375,7 +375,6 @@ figure {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  background-color: #8a8a8a;
   z-index: 0;
 }
 
@@ -403,6 +402,14 @@ figure p {
 
 .step.is-active {
   /*background-color: var(--yellow);*/
+}
+
+.graphic {
+  display: none; /* Alle Grafiken standardmäßig ausblenden */
+}
+
+.graphic.is-visible {
+  display: block; /* Sichtbar machen, wenn aktiv */
 }
 
 footer{
