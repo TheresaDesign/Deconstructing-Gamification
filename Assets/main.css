@@ -97,7 +97,12 @@ h3{
   font-size: 27px;
   margin: 0;
 }
-
+h4{
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  margin: 0;
+}
 #bold{
   font-weight: 700;
 }
@@ -324,9 +329,9 @@ section{
   top: 5px;
 }
 
+
 /*Scrollytelling Rad*/
 .wheel {
-  display: none;
   position: fixed;
   left: -50px; /* Damit es seitlich abgeschnitten ist */
   top: 50%;
@@ -345,7 +350,7 @@ section{
 .text-section {
   height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
   font-size: 1.5rem;
 }
