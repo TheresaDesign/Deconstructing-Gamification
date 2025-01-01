@@ -250,6 +250,13 @@ header{
   max-width: 1200px;
 }
 
+#body-text{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--of_Black);
+    position: relative;
+}
 article{
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
@@ -331,6 +338,12 @@ section{
 
 
 /*Scrollytelling Rad*/
+#elements{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0;
+}
+
 .wheel {
   position: fixed;
   left: -50px; /* Damit es seitlich abgeschnitten ist */
@@ -339,22 +352,28 @@ section{
   width: 300px;
   height: 300px;
 }
-.cls-2 {
+.category {
   fill: rgb(255, 0, 0);
   transition: transform 0.3s, fill 0.3s;
 }
-.cls-2.active {
+.category.active {
   fill: orange;
   transform: scale(1.2); /* Vergrößert das aktive Stück */
 }
-.text-section {
-  height: 100vh;
+.wheel-information {
   display: flex;
+  flex-direction: row-reverse;
+  flex-basis: 100%;
+}
+.wheel-text {
+  display: flex;
+  flex-basis: 50%;
   flex-direction: column;
-  justify-content: center;
-  font-size: 1.5rem;
 }
 
+.wheel-graphic{
+  flex-basis: 25%;
+}
 
 /*SCROLLYTELLING Psychology*/
 #scrolly {

@@ -1,5 +1,5 @@
 // SVG-Elemente
-const segments = document.querySelectorAll('.cls-2');
+const segments = document.querySelectorAll('.category');
 const wheel = document.querySelector('.wheel');
 
 // ScrollTrigger-Setup
