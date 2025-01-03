@@ -133,21 +133,24 @@ main{
 }
 header{
     display: flex;
-    max-width: 1200px;
     justify-content: flex-end;
     padding: 2% 0;
-    width: 100%;
+}
+
+.header-content{
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  justify-content: end;
+  gap: 61%;
 }
 
 .chapter-menu {
-  position: fixed;
-  top: 45%;
-  left: 91%;
-  z-index: 1;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .chapter-menu ul {
@@ -155,22 +158,21 @@ header{
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 35px; 
-  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
 .chapter-menu ul::before {
   content: '';
   position: absolute;
-  top: 50%; /* Horizontale Ausrichtung */
-  left: 50%; /* Linksbündigkeit sicherstellen */
-  transform: translate(-50%, -50%);
-  width: 2px; /* Dicke der Linie */
-  height: 100%; /* Linie erstreckt sich über alle Punkte */
-  background-color: var(--grey2); /* Farbe der Linie */
-  z-index: -1; /* Linie hinter die Punkte legen */
+  top: -150px;
+  transform: rotate(90deg);
+  width: 2px;
+  background-color: var(--grey2);
+  z-index: -1;
+  height: 318px;
 }
 
 .chapter-point {
@@ -181,16 +183,19 @@ header{
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 3px 0px 0px var(--grey1);
 }
 
 
 .chapter-point.visited {
   background-color: var(--chapter-color);
+  box-shadow: 0px 3px 0px 0px var(--chapter-color);
 }
 
 .chapter-point.active {
   width: 25px; 
   height: 25px;
+  top: -4px;
 }
 
 .chapter-point:hover {
@@ -224,23 +229,27 @@ header{
 }
 
 .chapter-intro.visited {
-  background-color: var(--green_light); /* Tomato */
+  background-color: var(--green_light);
+  box-shadow: 0px 3px 0px 0px var(--green_dark);
+}
+
+.chapter-deconstruct.visited {
+  background-color: var(--yellow);
+  box-shadow: 0px 3px 0px 0px var(--orange);
 }
 
 .chapter-elements.visited {
-  background-color: var(--yellow); /* Lime Green */
-}
-
-.chapter-elements.visited {
-  background-color: var(--purple); /* Lime Green */
+  background-color: var(--purple); 
+  box-shadow: 0px 3px 0px 0px var(--darkblue);
 }
 
 .chapter-psychology.visited {
-  background-color: var(--orange); /* Steel Blue */
+  background-color: var(--orange);
+  box-shadow: 0px 3px 0px 0px var(--red);
 }
 
 .chapter-case.visited {
-  background-color: #ffa500; /* Orange */
+  background-color: #ffa500;
 }
 
 .chapter-conclusion.visited {
@@ -356,8 +365,8 @@ section{
 
 .wheel {
   position: fixed;
-  left: -250px;
-  top: 87%;
+  left: -295px;
+  top: 93%;
   transform: translateY(-50%);
   width: 300px;
   height: 300px;
