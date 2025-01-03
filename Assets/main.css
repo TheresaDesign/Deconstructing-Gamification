@@ -119,14 +119,24 @@ main{
     height: auto;
     flex-direction: column;
 }
+
+.header-box{
+
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--grey4);
+  border: 2px solid var(--grey3);
+  margin-top: -2px;
+  z-index: 1000;
+}
 header{
     display: flex;
-    width: 100%;
     max-width: 1200px;
     justify-content: flex-end;
-    margin-top: 70px;
-    position: fixed;
-    z-index: 1000;
+    padding: 2% 0;
+    width: 100%;
 }
 
 .chapter-menu {
@@ -243,7 +253,6 @@ header{
 }
 
 #intro_content{
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -278,7 +287,7 @@ section{
 .button-big {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
-  font-size: 13px;
+  font-size: 12px;
   padding: 8px 15px;
   text-transform: lowercase;
   border-radius: 8px;
@@ -343,6 +352,7 @@ section{
   margin: auto;
   padding: 0;
 }
+
 
 .wheel {
   position: fixed;
