@@ -432,11 +432,11 @@ section{
   display: flex;
   flex-basis: 25%;
   flex-direction: column;
-  border: 2px solid var(--grey2);
-  box-shadow: 0px 5px 0px 0px var(--grey2);
-  border-radius: 11px;
+  border: 3px solid var(--grey3);
   padding: 20px;
   box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 6px 0px 0px var(--grey3);
   flex-shrink: 0;
 }
 
@@ -488,15 +488,24 @@ section{
   flex-basis: 100%;
   height: 100vh;
   align-items: center;
+  
 }
 .wheel-text {
   display: flex;
   flex-basis: 50%;
   flex-direction: column;
+  border: 3px solid var(--grey3);
+  padding: 30px 30px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 6px 0px 0px var(--grey3);
 }
 
 .wheel-graphic{
   flex-basis: 25%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 6px 0px 0px var(--grey3);
 }
 
 /*SCROLLYTELLING Psychology*/
