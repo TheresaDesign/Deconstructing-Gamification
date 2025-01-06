@@ -10,22 +10,20 @@ var scroller = scrollama();
 
 // generic window resize listener event
 function handleResize() {
-// 1. update height of step elements
-var stepH = Math.floor(window.innerHeight * 1.5);
-step.style("height", stepH + "px");
+    // 1. Entferne die feste Höhe der Steps, damit sie sich dem Inhalt anpassen
+    step.style("height", "auto");
 
-var figureHeight = window.innerHeight / 1.5;
-// Setze den top-Wert auf 25% der Fensterhöhe
-var figureMarginTop = window.innerHeight * 0.08;
+    // 2. update height und margin für figure
+    var figureHeight = window.innerHeight / 1.5; // Höhe der Grafik
+    var figureMarginTop = window.innerHeight * 0.08; // Margin oben
 
-figure
-    .style("height", figureHeight + "px")
-    .style("top", figureMarginTop + "px");
+    figure
+        .style("height", figureHeight + "px")
+        .style("top", figureMarginTop + "px");
 
-// 3. tell scrollama to update new element dimensions
-scroller.resize();
+    // 3. tell scrollama to update new element dimensions
+    scroller.resize();
 }
-
 // scrollama event handlers
 function handleStepEnter(response) {
     console.log(response);

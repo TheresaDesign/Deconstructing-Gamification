@@ -8,8 +8,10 @@
     --blue: #1cb0f6;
     --red: #ff4b4b; /*negative*/
     --yellow: #ffc800;
-    --orange: #ff9600;/*psychology*/
+    --orange: #ff9600;
+    --darkorange:#CD7800;/*psychology*/
     --purple: #ce82ff;
+    --darkpurple: #9069cd;
     --darkblue: #2b70c9;
     /*neutrals colors*/
     --grey1: #777777;
@@ -208,8 +210,8 @@ header{
 .chapter-point::after {
   content: attr(data-title);
   position: absolute;
-  left: -100px;
-  top: 50%;
+  left:50%;
+  z-index: 200;
   transform: translateY(-50%);
   background-color: var(--grey4);
   color: var(--green_light);
@@ -245,13 +247,14 @@ header{
   box-shadow: 0px 3px 0px 0px var(--darkblue);
 }
 
-.chapter-psychology.visited {
+.chapter-psycho.visited {
   background-color: var(--orange);
   box-shadow: 0px 3px 0px 0px var(--red);
 }
 
-.chapter-case.visited {
-  background-color: #ffa500;
+.chapter-critic.visited {
+  background-color: var(--blue);
+  box-shadow: 0px 3px 0px 0px var(--darkblue);
 }
 
 .chapter-conclusion.visited {
@@ -391,7 +394,7 @@ section{
 
 
 .wheel {
-  position: fixed;
+  position: static;
   left: -295px;
   top: 93%;
   transform: translateY(-50%);
