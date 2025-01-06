@@ -123,7 +123,10 @@ main{
     height: auto;
     flex-direction: column;
 }
-
+.row{
+  display: flex;
+  flex-direction: row;
+}
 .header-box{
 
   position: fixed;
@@ -384,7 +387,29 @@ section{
   top: 5px;
 }
 
+/*deconstructing the interface*/
+#deconstruct{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0;
+}
 
+.side-box-text{
+  display: flex;
+  flex-basis: 25%;
+  flex-direction: column;
+  border: 2px solid var(--grey2);
+  box-shadow: 0px 5px 0px 0px var(--grey2);
+  border-radius: 11px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.side-box-image{
+  display: flex;
+  flex-basis: 75%;
+  overflow: scroll;
+}
 /*Scrollytelling Rad*/
 #elements{
   max-width: 1200px;
