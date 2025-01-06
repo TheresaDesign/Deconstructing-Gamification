@@ -31,9 +31,36 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.5 }
 );
-
-
 // Beobachten aller Abschnitte
 sections.forEach((section) => observer.observe(section));
 
 
+// Javascript für das scrollen des deconstructing teils
+window.onload = function() {
+  const box = document.getElementById('scrollBox');
+  box.scrollLeft = (box.scrollWidth - box.clientWidth) / 2; // Horizontal mittig
+  box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Optional: Vertikal mittig
+};
+
+let scale = 1; // Initialer Zoom-Wert
+
+  function zoomIn() {
+    scale += 0.1; // Vergrößern
+    applyZoom();
+  }
+
+  function zoomOut() {
+    scale -= 0.1; // Verkleinern
+    applyZoom();
+  }
+
+  function resetZoom() {
+    scale = 1; // Zurück auf Standardzoom
+    applyZoom();
+  }
+
+  function applyZoom() {
+    const gui = document.getElementById('gui');
+    gui.style.transform = `scale(${scale})`;
+    gui.style.transformOrigin = 'center'; // Zoom von der Mitte aus
+  }
