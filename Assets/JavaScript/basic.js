@@ -22,16 +22,17 @@ const observer = new IntersectionObserver(
         // Aktivieren des aktuellen Kapitels
         chapters.forEach((c) => c.classList.remove("active"));
         chapter.classList.add("active", "visited");
-      } else if (entry.boundingClientRect.bottom < 0 || entry.boundingClientRect.top > window.innerHeight) {
-        // Entfernen von "visited", wenn die Section außerhalb des Viewports ist
-        chapter.classList.remove("visited");
+      } else {
+        // Entfernen von "visited", wenn man zurückscrollt
+        if (entry.boundingClientRect.top > 0) {
+          chapter.classList.remove("visited");
+        }
+        chapter.classList.remove("active");
       }
-      chapter.classList.remove("active");
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.5 } // Aktiviert bei 50% Sichtbarkeit des Abschnitts
 );
-
 
 // Beobachten aller Abschnitte
 sections.forEach((section) => observer.observe(section));
