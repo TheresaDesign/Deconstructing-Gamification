@@ -370,6 +370,38 @@ section{
   transform: translateY(3px); /* Visueller "Klick-Effekt" */
 }
 
+.button-skip {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 8px 15px;
+  text-transform: lowercase;
+  border-radius: 8px;
+  background-color: var(--white); 
+  color: var(--darkpurple);
+  border: 2px solid var(--darkpurple);
+  box-shadow: 0px 5px 0px 0px var(--darkpurple);
+  text-decoration: none; 
+  display: inline-block; 
+  cursor: pointer;
+  position: sticky; 
+  top:90%;
+  z-index:2000;
+}
+
+.button-skip:hover {
+  background-color: var(--darkpurple); 
+  box-shadow: 0px 3px 0px 0px var(--purple);
+  color: var(--grey4);
+}
+.button-skip:active {
+  background-color: var(--white); 
+  box-shadow: 0px 2px 0px 0px var(--darkpurple); 
+  color: var(--darkpurple);
+  border: 1px solid var(--darkpurple);
+  transform: translateY(3px); /* Visueller "Klick-Effekt" */
+}
+
 .button-small {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
