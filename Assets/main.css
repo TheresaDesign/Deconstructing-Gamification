@@ -115,7 +115,7 @@ h5{
   margin: 1rem 0 -1rem;
 }
 
-p {
+p,ul {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -367,7 +367,7 @@ section{
   box-shadow: 0px 2px 0px 0px var(--green_light); 
   color: var(--green_light);
   border: 1px solid var(--green_light);
-  transform: translateY(3px); /* Visueller "Klick-Effekt" */
+  transform: translateY(3px); 
 }
 
 .button-skip {
@@ -386,7 +386,6 @@ section{
   cursor: pointer;
   position: sticky; 
   top:90%;
-  z-index:2000;
 }
 
 .button-skip:hover {
@@ -625,6 +624,7 @@ footer{
   max-width: 1200px;
   padding-top: 50px;
   padding-bottom: 50px;
+  color: var(--white);
 }
 .footer-content{
   flex-basis: 50%;
