@@ -48,28 +48,3 @@ function centerScrollPosition(box) {
   box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Vertikal mittig
 }
 
-
-
-  //script für den skip-wheel button
-
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    // Alle Kapitel in einer NodeList sammeln
-    const chapters = document.querySelectorAll('section');
-    // Aktuelle Scrollposition
-    const currentScroll = window.scrollY;
-    let nextChapter = null;
-
-    // Das nächste Kapitel suchen
-    for (const chapter of chapters) {
-        const chapterTop = chapter.offsetTop;
-        if (chapterTop > currentScroll) {
-            nextChapter = chapter;
-            break;
-        }
-    }
-
-    // Wenn ein nächstes Kapitel gefunden wurde, dorthin scrollen
-    if (nextChapter) {
-        nextChapter.scrollIntoView({ behavior: 'smooth' });
-    }
-});
