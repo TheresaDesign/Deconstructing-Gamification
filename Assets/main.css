@@ -24,62 +24,7 @@
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:wght@600&family=Rokkitt:wght@266;400;600&display=swap');
-@font-face {
-    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('Nunito/Nunito-Light.ttf') format('truetype');
-  }
-  
-  @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/Assets/Nunito/ttf/Nunito-Regular.ttf') format('truetype'),
-    url('/Assets/Nunito/woff/Nunito-Regular.woff') format('woff')
-    ;
-  }
 
-  @font-face {
-    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url('Nunito/Nunito-Medium.ttf') format('truetype');
-  }
-  
-  @font-face {
-    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('Nunito/Nunito-Bold.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('Nunito/Nunito-ExtraBold.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url('Nunito/ttf/Nunito-Black.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: "Nunito",sans-serif;
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: url('.../Nunito/Nunito-MediumItalic.ttf') format('truetype');
-  }
   
 h1{
     font-family: 'Nunito', sans-serif;
