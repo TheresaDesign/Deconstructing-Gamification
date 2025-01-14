@@ -1,0 +1,86 @@
+things to talk about:
+presentation
+    who does what
+    when practise?
+flowchart
+    structure
+    what happens with the effectiveness approach?
+overall design
+topics
+mehrwert projekt/ what mkaes it special
+
+General to dos:
+Fonts nicht mehr über link sondern lokal einbetten
+font bei psychology einbetten
+alle bilder englisch
+
+About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz alle Tools, Rahmenwerke oder Methoden, die in der Analyse verwendet werden (z. B. UI Ripping, Benutzerumfragen).
+
+To dos:
+video startet nicht
+
+
+
+
+
+https://uclab.fh-potsdam.de/mapping/machtmietenarm/
+
+https://russellsamora.github.io/scrollama/sticky-side/
+
+
+@font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('Nunito/Nunito-Light.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/Assets/Nunito/ttf/Nunito-Regular.ttf') format('truetype'),
+    url('/Assets/Nunito/woff/Nunito-Regular.woff') format('woff')
+    ;
+  }
+
+  @font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('Nunito/Nunito-Medium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('Nunito/Nunito-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('Nunito/Nunito-ExtraBold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('Nunito/ttf/Nunito-Black.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: "Nunito",sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url('.../Nunito/Nunito-MediumItalic.ttf') format('truetype');
+  }
