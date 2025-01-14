@@ -396,7 +396,9 @@ section{
   cursor: pointer;
 }
 #source{
-  color: var(--green_dark);
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 700;
 }
 .popup {
   display: none;

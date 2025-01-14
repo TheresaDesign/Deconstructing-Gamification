@@ -17,7 +17,10 @@ alle bilder englisch
 About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz alle Tools, Rahmenwerke oder Methoden, die in der Analyse verwendet werden (z. B. UI Ripping, Benutzerumfragen).
 
 To dos:
-video startet nicht
+video schleife
+bei Rad das gif einbauen
+quellen für gamification Teil
+
 
 
 
