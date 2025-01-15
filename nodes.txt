@@ -12,20 +12,14 @@ mehrwert projekt/ what mkaes it special
 General to dos:
 Fonts nicht mehr über link sondern lokal einbetten
 font bei psychology einbetten
-alle bilder englisch
+icon für tab
 
 About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz alle Tools, Rahmenwerke oder Methoden, die in der Analyse verwendet werden (z. B. UI Ripping, Benutzerumfragen).
 
 To dos:
-video schleife
-bei Rad das gif einbauen
-quellen für gamification Teil
-quellen ende des Dokuments
-
-
-
-
-
+bilder überall
+alle bilder englisch
+informationen Le Na erneueren
 
 https://uclab.fh-potsdam.de/mapping/machtmietenarm/
 

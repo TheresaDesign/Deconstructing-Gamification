@@ -18,7 +18,7 @@
   <div class="header-box">
     <div class="header-content">
       <img src="Assets/Logo.png" alt="" style="width: 265px; height: 32.4px; margin: auto 0;">
-      <div class="column" style="justify-content: center; width: 200px;">
+      <div class="column" style="justify-content: center; width: 200px; display:none">
         <div class="row" style="text-align: center; justify-content: center; margin-left: -20px; gap: 3px;">
           <img src="Assets/Pfeil.svg" alt="" style="margin-right: 7px;">
           <div style="font-family: 'Nunito'; color: var(--grey2); font-size: 13px; font-weight: 700;">SECTION 2, </div>
@@ -151,9 +151,9 @@
         
           <article class="text-center">
               <p>Gamification refers to the use of game design elements and principles in non-game contexts to motivate, engage and influence behavior. By incorporating components such as points, badges, leaderboards, challenges and rewards, gamification draws on different types of motivation to make everyday tasks more engaging and enjoyable.</p>
-              <p>The concept is rooted in psychological mechanisms that drive human behavior. For example, gamified systems often use concepts such as instant feedback, progress tracking, competition and social interaction to motivate users. These principles are not just for entertainment, but have also found applications in areas as diverse as marketing, health and education.</p>
+              <p>The concept is rooted in psychological mechanisms that drive human behavior. For example, <a id="source" href="https://dl.acm.org/doi/10.1145/2583008.2583017">gamified systems</a> often use concepts such as instant feedback, progress tracking, competition and social interaction to motivate users. These principles are not just for entertainment, but have also found applications in areas as diverse as marketing, health and education.</p>
               <p>Gamification has proven to be particularly powerful in the area of learning and education platforms. By transforming traditional learning into an interactive experience, gamification encourages deeper engagement and enhances the learning process. Key strategies include breaking down complex topics into manageable challenges, rewarding progress with badges or achievements, and encouraging collaboration through team-based activities or social competition.</p>
-              <p>Research shows that gamification can significantly improve educational outcomes. For example, gamified platforms can increase knowledge retention, encourage regular practice and make learning more enjoyable. Learning platforms such as Duolingo exemplify this approach, using gamification to teach languages, memorize concepts or prepare for exams in an engaging way.</p>
+              <p>Research shows that gamification can significantly <a id="source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9093234/pdf/cin-40-335.pdf">improve educational outcomes</a>. For example, gamified platforms can increase knowledge retention, encourage regular practice and make learning more enjoyable. Learning platforms such as Duolingo exemplify this approach, using gamification to teach languages, memorize concepts or prepare for exams in an engaging way.</p>
               <p>In the following sections, we will explore the basic concepts of gamification, its psychological underpinnings and its specific applications in Duolingo to understand exactly how learning with gamification works, but also how it may not work in some instances or may even have the opposite effect</p>
           </article>
       </section>
@@ -3504,7 +3504,7 @@
 
       <div class="wheel-information">
         <div class="wheel-graphic">
-          <img src="Assets/Deconstructing/elements-pics/economy.svg" alt=""> 
+          <img src="Assets/Deconstructing/gifs/Duolingo_PressKit_GemChest_900.gif" alt="" style="scale: 1.6;z-index: -1; position: relative;"> 
         </div>
         <div class="wheel-text" style="box-shadow: 0px 6px 0px 0px #FE7877; border: 3px solid #FE7877" >
           <h4 style="color: #E92B2B;">ECOLOGICAL</h4>
@@ -3557,7 +3557,7 @@
 
       <div class="wheel-information">
         <div class="wheel-graphic">
-          <video autoplay muted >
+          <video autoplay muted loop>
             <source src="Assets/Deconstructing/elements-pics/time-pressure.mp4" type="video/mp4">
           </video> 
         </div>
@@ -3572,6 +3572,8 @@
             test their knowledge under pressure, making the experience more dynamic and game-like.</p></div>
         </div>
       </div>
+
+      <img src="Assets/Deconstructing/gifs/Duolingo_PressKit_DuoCheer_900.gif" alt="" style="width: 50%; margin-left: 25%;">
 
       <div class="wheel-information">
         <div class="wheel-graphic"> 
@@ -3613,7 +3615,12 @@
         <div class="wheel-text">
           <h4 style="color: #FFC800;">SOCIAL</h4>
           <h3>reputation</h3>
-          <div id="body-text">Hier kommt noch Text hin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius, urna eu hendrerit convallis, purus nisi aliquet libero, id laoreet lorem odio at lorem. Nullam malesuada, nibh non fermentum efficitur, purus mauris congue eros, sit amet gravida ex velit nec metus. Integer non urna et turpis consectetur volutpat nec sed turpis. Proin venenatis ligula sit amet velit tempus, a suscipit turpis dictum. Suspendisse potenti. Donec euismod justo nec felis euismod gravida.</div>
+          <div id="body-text">
+            <h5>Community Challenges</h5>
+            <p>Duolingo builds reputation with features that let users get recognition for their progress and achievements.</p>
+            <p>For Example Leaderboards and Leagues. Users compete with others to move up in ranks and hold a top position, showing their effort and skill. Being high on the leaderboard is a sign of success and boosts their reputation among others.</p>
+            <p>Reputation motivates users in two ways: it makes them feel proud of their accomplishments (intrinsic) and gives them recognition from others (extrinsic). This helps keep learners interested and engaged.</p>
+          </div>
         </div>
       </div>
 
@@ -3682,8 +3689,7 @@
           <h3>puzzle</h3>
           <div id="body-text">
             <h5>Sentence Construction</h5>
-            <p>Duolingo includes activities that require problem-solving or critical thinking. It has various exercises
-              that challenge users to apply their knowledge in different ways, making learning feel like solving
+            <p>Duolingo includes activities that require problem-solving or critical thinking. It has various exercises that challenge users to apply their knowledge in different ways, making learning feel like solving
               puzzles.</p>
               <p>For Example users are often asked to form sentences by dragging words into the correct order or
                 filling in missing words, mimicking a puzzle-like experience.</p>
@@ -4081,6 +4087,106 @@
 
     </section>
     </main>
+
+    <div id="intro-box">
+      <section id="intro_content" id="intro">
+        <div class="kapitel">
+          <div class="title">
+            <div class="line" style="background-color: var(--blue);"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 595.28 595.28" >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: var(--red);
+                    }
+              
+                    .cls-2 {
+                      fill:var(--red);
+                    }
+              
+                    .cls-3 {
+                      fill: var(--white);
+                    }
+                  </style>
+                </defs>
+                <!-- Generator: Adobe Illustrator 28.7.3, SVG Export Plug-In . SVG Version: 1.2.0 Build 164)  -->
+                <g id="kapitel-icon">
+                  <g>
+                    <path style="fill: var(--darkblue);" d="M498.23,263.87c0,100.79-49.97,196.89-200.59,196.91-138.37.02-200.59-96.12-200.59-196.91s89.81-168.09,200.59-168.09,200.59,67.3,200.59,168.09Z"/>
+                    <ellipse style="fill: var(--blue);" cx="297.64" cy="255.23" rx="200.06" ry="160.15"/>
+                    <g>
+                      <path class="cls-3" d="M326.05,315.6c8.18-2.45,22.79-7.34,38.78-25.54,16.11-18.35,18.94-35.28,19.47-40.96,1.68-18,0-66.92,0-72.29,0-8.15-8.28-13.21-14.1-16.34-5.82-3.13-16.56-4.25-27.08.9-10.52,5.15-31.78,11.41-40.96,10.97-9.18-.45-23.5-6.04-30.44-8.95-6.94-2.91-12.51-5.88-16.11-5.82-2.69.05-12.98-.22-20.82,6.27s-8.73,14.32-8.73,14.32c0,0-.67,20.82,0,67.59.67,46.78,46.44,65.91,57.52,69.16,11.08,3.25,12.98,5.15,12.76,9.74-.12,2.55-1.7,4.55-3.08,5.82h-20.02c-4.63,0-8.38,3.75-8.38,8.38v2.67h-10.31c-4.73,0-8.56,3.83-8.56,8.56s3.83,8.56,8.56,8.56h97.7c4.73,0,8.56-3.83,8.56-8.56s-3.83-8.56-8.56-8.56h-7.89v-2.67c0-4.63-3.75-8.38-8.38-8.38h-20.42c-1.55-1.27-2.76-3.51-2.76-6.38,0-5.71,5.68-6.21,13.26-8.48Z"/>
+                      <path class="cls-3" d="M221.81,272.04c-4.87-11.92-5.2-23.64-5.2-32.4-3.09-6.34-6.21-8.23-9.06-11.08s-8.56-5.2-10.24-5.37-4.7-.84-6.38,2.85-.84,12.59,3.02,19.83,9.9,9.54,9.9,9.54l1.51,11.41s-6.55-.34-11.58.17c-5.04.5-7.89,2.69-7.72,5.04.17,2.35,3.36,8.56,10.58,13.93s18.3,4.2,18.3,4.2l5.04,8.06s-4.87,1.68-7.72,3.86c-2.85,2.18-7.39,9.23-8.39,11.58-1.01,2.35.34,4.53,2.35,5.37,2.01.84,8.39,3.69,16.45,2.01,8.06-1.68,13.43-10.58,16.11-13.43,2.69-2.85,4.2-7.05,1.68-8.9s-13.76-14.77-18.63-26.69Z"/>
+                      <path class="cls-3" d="M415.06,267.01c-5.04-.5-11.58-.17-11.58-.17l1.51-11.41s6.04-2.3,9.9-9.54c3.86-7.24,4.7-16.14,3.02-19.83s-4.7-3.02-6.38-2.85-7.39,2.52-10.24,5.37-5.97,4.74-9.06,11.08c0,8.75-.34,20.48-5.2,32.4-4.87,11.92-16.12,24.84-18.63,26.69s-1.01,6.04,1.68,8.9c2.69,2.85,8.06,11.75,16.11,13.43,8.06,1.68,14.44-1.17,16.45-2.01,2.01-.84,3.36-3.02,2.35-5.37-1.01-2.35-5.54-9.4-8.39-11.58-2.85-2.18-7.72-3.86-7.72-3.86l5.04-8.06s11.08,1.18,18.3-4.2,10.41-11.58,10.58-13.93c.17-2.35-2.69-4.53-7.72-5.04Z"/>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            <div class="line" style="background-color: var(--blue);"></div>
+          </div>
+          <h2 style="color: var(--blue);">References</h2>
+        </div>
+        
+          <article class="text-center">
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>Asquer, A., Department of Financial and Management Studies, SOAS, University of London & Dipartimento di Scienze Economiche e Aziendali, Università degli Studi di Cagliari. (o. D.). Not Just Videogames: Gamification and its Potential Application to Public Services. In E. F. Halpin (Hrsg.), Digital Public Administration And E-Government in Developing Nations: Policy And Practice [Book-chapter]. <a id="source" href="https://ssrn.com/abstract=2429345">Accessed on 03.12.2024</a></div>
+            </div>
+
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>Fatih, Y., Kumalija, E. J. & Sun, Y. (2018). Mobile Learning Based Gamification in a History Learning Context. International Association For Development Of The Information Society. <a id="source" href="https://files.eric.ed.gov/fulltext/ED590348.pdf">Accessed on 03.12.2024</a></div>
+            </div>
+
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>Hassenzahl, M., Eckoldt, K., Diefenbach, S., Laschke, M., Lenz, E. & Kim, J. (2013). Designing Moments of Meaning and Pleasure. Experience Design and Happiness. International Journal Of Design, 7(3). <a id="source" href="https://www.questia.com/library/journal/1P3-3156953391/designing-moments-of-meaning-and-pleasure-experience">Accessed on 15.01.2025</a></div>
+            </div>
+
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>Inangil, D., Dincer, B. & Kabuk, A. (2022). Effectiveness of the Use of Animation and Gamification in Online Distance Education During Pandemic. <a id="source" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9093234/pdf/cin-40-335.pdf">Accessed on 15.01.2025</a></div>
+            </div>
+
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>Koch, M., Ott, F., Oertelt, S., Forschungsgruppe Kooperationssysteme & Universität der Bundeswehr München. (2013). Gamification von Business Software – Steigerung von Motivation und Partizipation. In Michael Koch, Florian Ott & Stephan Oertelt, Schriften zur soziotechnischen Integration. Forschungsgruppe Kooperationssysteme, Universität der Bundeswehr München. <a id="source" href="https://athene-forschung.rz.unibw-muenchen.de/doc/90855/90855.pdf">Accessed on 11.12.2024</a></div>
+            </div>
+
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>Landers, R. N. & Callan, R. C. (2011). Casual Social Games as Serious Games: The Psychology of Gamification in Undergraduate Education and Employee Training. In Springer eBooks (S. 399–423). <a id="source" href="https://doi.org/10.1007/978-1-4471-2161-9_20">Accessed on 11.12.2024</a></div>
+            </div>
+
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>Linehan, C., Kirman, B. & Roche, B. (2015). Gamification as Behavioral Psychology. In The MIT Press eBooks (S. 81–106). <a id="source" href="https://doi.org/10.7551/mitpress/9788.003.0006">Accessed on 15.01.2025</a></div>
+            </div>
+
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>The Role of Motion Design in User Interface: Enhancing Usability and User Experience. (2023, 8. Juni). Association Of Human-Computer Interaction. <a id="source" href="https://www.hci.org.uk/article/the-role-of-motion-design-in-user-interface-enhancing-usability-and-user-experience/">Accessed on 15.01.2025</a></div>
+            </div>
+
+            <div id="reference" class="row">
+            <div>[01]</div>
+            <div>Toda, A. M., Klock, A. C. T., Oliveira, W., Palomino, P. T., Rodrigues, L., Shi, L., Bittencourt, I., Gasparini, I., Isotani, S. & Cristea, A. I. (2019). Analysing gamification elements in educational environments using an existing Gamification taxonomy. Smart Learning Environments, 6(1). <a id="source" href="https://link.springer.com/article/10.1186/s40561-019-0106-1#Sec4">Accessed on 15.01.2025</a></div>
+            </div>
+
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>Toda, A. M., Valle, P. H. D. & Isotani, S. (2018). The dark side of gamification: an overview of negative effects of gamification in education. Communications in Computer And Information Science, 832, 143–156.<a id="source" href="https://repositorio.usp.br/item/002906013">Accessed on 15.01.2025</a></div>
+            </div>
+
+            <div id="reference" class="row">
+              <div>[01]</div>
+              <div>Vesselinov, R., Grego, J., Queens College, City University of New York & University of South Carolina. (2012). Duolingo effectiveness study.<a id="source" href="https://www.languagezen.com/pt/about/english/Duolingo_Efficacy_Study.pdf">Accessed on 03.12.2024</a></div>
+            </div>
+
+          </article>
+      </section>
+  </div>
+
     <footer>
         <div class="footer-container">
             <div class="footer-content">

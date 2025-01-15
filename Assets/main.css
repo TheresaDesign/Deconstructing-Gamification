@@ -70,6 +70,7 @@ p,ul {
   font-size: 18px;
   color: var(--of_Black);
   position: relative;
+  line-height: 1.55;
 }
 
 #bold{
@@ -399,6 +400,11 @@ section{
   color: var(--blue);
   text-decoration: none;
   font-weight: 700;
+}
+
+#reference{
+  gap:15px;
+  margin: 15px 0;
 }
 .popup {
   display: none;
