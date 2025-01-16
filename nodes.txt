@@ -15,16 +15,19 @@ font bei psychology einbetten
 icon für tab
 beim RAd ist zweimal community challenges hintereinander- dafür sorgen, dass die Texte aufeinander aufbauen
   auf die Bilder eingehen
+farnooshs Quellen:
+  Loewen, S., Isbell, D. R., & Sporn, Z. (2019). The effectiveness of Duolingo as a language learning tool. Journal of Second Language Learning.
+  Wyner, G. (2014). Fluent Forever: How to Learn Any Language Fast and Never Forget It. Harmony Books.
+  Duolingo Research Team. How Duolingo Works: Gamification for Learning. Duolingo Blog.
+  InFUSION. Gamification : A Proposed Solution to Bridge Education and Game Design. Malaysian Online Journal of Educational Technology (2018). Gamification in Education.
+  ERIC - Mobile Learning and Gamification.
+
 
 About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz alle Tools, Rahmenwerke oder Methoden, die in der Analyse verwendet werden (z. B. UI Ripping, Benutzerumfragen).
 
 Phonecall video
 
 To dos:
-bilder überall
-alle bilder englisch
-farnoosh text
-farben in der umrandung
 
 https://uclab.fh-potsdam.de/mapping/machtmietenarm/
 
