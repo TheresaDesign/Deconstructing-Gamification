@@ -1,13 +1,11 @@
-things to talk about:
-presentation
-    who does what
-    when practise?
-flowchart
-    structure
-    what happens with the effectiveness approach?
-overall design
-topics
-mehrwert projekt/ what mkaes it special
+Problems:
+Webside:
+  - Operant conditioning has no picture
+  - spacing in the psychology part is wierd
+
+Essay:
+  - Wheel Text: Reihenfolge is wierd. Im Rad wird zum Beispiel storytelling genannt, obwohl das gar nicht existiert. Er später wird gesagt warum das überhaupt genannt wird
+  - Bereiche des Rades erklären
 
 General to dos:
 Fonts nicht mehr über link sondern lokal einbetten
