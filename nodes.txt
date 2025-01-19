@@ -1,6 +1,5 @@
 Problems:
 Webside:
-  - Operant conditioning has no picture
   - spacing in the psychology part is wierd
 
 Essay:
