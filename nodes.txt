@@ -29,6 +29,9 @@ Phonecall video
 
 To dos:
 
+<span id="bold" style="color: var(--orange);"></span>
+
+
 https://uclab.fh-potsdam.de/mapping/machtmietenarm/
 
 https://russellsamora.github.io/scrollama/sticky-side/

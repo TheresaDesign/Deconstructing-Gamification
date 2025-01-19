@@ -581,9 +581,6 @@ figure p {
   margin-bottom: 0;
 }
 
-.step.is-active {
-  /*background-color: var(--yellow);*/
-}
 
 .graphic {
   display: none; /* Alle Grafiken standardmäßig ausblenden */
