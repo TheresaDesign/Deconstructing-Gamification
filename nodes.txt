@@ -18,6 +18,7 @@ farnooshs Quellen:
   Duolingo Research Team. How Duolingo Works: Gamification for Learning. Duolingo Blog.
   InFUSION. Gamification : A Proposed Solution to Bridge Education and Game Design. Malaysian Online Journal of Educational Technology (2018). Gamification in Education.
   ERIC - Mobile Learning and Gamification.
+  https://eera-ecer.de/ecer-programmes/conference/29/contribution/58888
 
 
 About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz alle Tools, Rahmenwerke oder Methoden, die in der Analyse verwendet werden (z. B. UI Ripping, Benutzerumfragen).
