@@ -498,7 +498,9 @@ section{
 
 .dossier .dossier-text {
   visibility: hidden;
-  width: 300px;
+  max-width: 300px;
+  width: fit-content;
+  min-width: 120px;
   font-size: 15px;
   background-color: var(--white);
   border: 2px solid var(--blue);
