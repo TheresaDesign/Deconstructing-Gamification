@@ -144,7 +144,7 @@ main{
     display: flex;
     max-width: 1200px;
     margin: auto;
-    padding: 0;
+    padding: 0 3vh;
     height: auto;
     flex-direction: column;
 }
@@ -339,6 +339,7 @@ header{
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 5%;
+  padding: 0 3vh;
 }
 
 
@@ -528,7 +529,7 @@ section{
 #deconstruct{
   max-width: 1200px;
   margin: auto;
-  padding: 0;
+  padding: 0 3vh;
 }
 
 .side-box-text{
@@ -561,7 +562,7 @@ section{
 #elements{
   max-width: 1200px;
   margin: auto;
-  padding: 0;
+  padding: 0 3vh;
 }
 
 .stopper{
@@ -706,4 +707,82 @@ footer{
   font-family: "Nunito";
   flex-grow: 0;
   flex-shrink: 0;
+}
+
+/*bilder*/
+#duo-weights{
+  width: 55%;
+}
+
+div #duo-party{
+  width: 50%; justify-content: center; display: flex;
+}
+
+#duo-party{
+  width: 50%;
+}
+
+div #group-duo{
+  width: 50%; 
+  justify-content: center; 
+  display: flex;
+}
+#group-duo{
+  width: 55%;
+}
+
+@media screen and (max-width: 500px){
+  h2{
+    font-size: 30px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+
+  p{
+    font-size:16px;
+  }
+
+  .row{
+    flex-direction: column;
+  }
+
+  article{
+    width: 100%;
+    font-size:16px;
+  }
+
+  #intro-box{
+    padding: 30px 0;
+  }
+
+  .line{
+    flex-basis: 100%;
+  }
+
+  .button-skip{
+    top: 115vh;
+  }
+
+  #img-guy{
+    display: none
+  }
+
+  #duo-weights{
+    width: 100%;
+  }
+  div #duo-party{
+    width: 100%; justify-content: center; display: flex;
+  }
+  #duo-party{
+    width: 100%;
+  }
+
+  div #group-duo{
+    width: 100%; 
+    justify-content: center; 
+    display: flex;
+  }
+  
 }
