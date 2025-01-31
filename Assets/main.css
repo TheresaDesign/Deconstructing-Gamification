@@ -682,6 +682,10 @@ figure p {
   display: block; /* Sichtbar machen, wenn aktiv */
 }
 
+#scrolly-img{
+  scale: 0.2;
+}
+
 footer{
   background-color: var(--green_dark);
   color: var(--white);
