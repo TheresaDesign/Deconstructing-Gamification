@@ -25,9 +25,8 @@ About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz al
 
 Phonecall video
 
-To dos:
+- research Question anpassen
 
-<span id="bold" style="color: var(--orange);"></span>
 
 
 https://uclab.fh-potsdam.de/mapping/machtmietenarm/

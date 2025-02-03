@@ -35,3 +35,27 @@ function centerScrollPosition(box) {
   box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Vertikal mittig
 }
 
+//GUI
+document.addEventListener("DOMContentLoaded", function () {
+  const showImageBtn = document.querySelector(".box-continue");
+  const modal = document.querySelector(".modalGUI");
+  const closeModal = document.querySelector(".close");
+
+  // Sicherstellen, dass das Modal standardmäßig geschlossen ist
+  modal.style.display = "none"; 
+
+  showImageBtn.addEventListener("click", function () {
+      modal.style.display = "flex"; // Modal öffnen
+  });
+
+  closeModal.addEventListener("click", function () {
+      modal.style.display = "none"; // Modal schließen
+  });
+
+  // Schließen bei Klick außerhalb des Bildes
+  modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+          modal.style.display = "none";
+      }
+  });
+});

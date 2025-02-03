@@ -422,6 +422,81 @@ section{
   transform: translateY(3px); /* Visueller "Klick-Effekt" */
 }
 
+.continue {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 8px 15px;
+  text-transform: lowercase;
+  border-radius: 8px;
+  background-color: var(--white); 
+  color: var(--grey1);
+  border: 2px solid var(--grey1);
+  box-shadow: 0px 5px 0px 0px var(--grey1);
+  text-decoration: none; 
+  display: inline-block; 
+  cursor: pointer;
+  
+  align-items: center;
+  display: flex;
+  gap: 11%;
+  width: 112px;
+  justify-content: center;
+}
+
+.continue:hover {
+  background-color: var(--grey3); 
+  box-shadow: 0px 3px 0px 0px var(--grey1);
+  
+}
+.continue:active {
+  background-color: var(--white); 
+  box-shadow: 0px 2px 0px 0px var(--grey1); 
+  color: var(--grey1);
+  border: 1px solid var(--grey1);
+  transform: translateY(3px); /* Visueller "Klick-Effekt" */
+}
+
+.arrow-right{
+width:15px;
+}
+
+.box-continue{
+  display: none;
+  flex-direction: row-reverse; 
+  margin-top:20px
+}
+
+.modalGUI{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index:30;
+  
+}
+
+.scroll-imagemobile{
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  font-family: 'Nunito';
+  position: fixed;
+  top: 10vh;
+  left: 3vh;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 40;
+}
+
 .button-small {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
@@ -800,5 +875,18 @@ div #group-duo{
     width: 150px;  
     margin: auto 0;
   }
+
+  .box-continue{
+    display: flex;
+  }
+
+  #GUIcontainer{
+    display: none;
+  }
   
+  .modalGUI{
+    display: flex;
+    flex-basis: 100%;
+  overflow: auto;
+  }
 }
