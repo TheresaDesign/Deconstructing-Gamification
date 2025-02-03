@@ -178,7 +178,6 @@ header{
   max-width: 1200px;
   margin: auto;
   width: 100%;
-  justify-content: end;
   background-color: var(--grey4);
   padding: 0 20px;
   border-radius: 5px;
@@ -817,6 +816,18 @@ div #group-duo{
   margin: auto 0;
 }
 
+#duo-liegt{
+  transform: scaleX(-1); 
+  left: 76%; 
+  position: relative; 
+  width: 200px; 
+  top: 115px;
+}
+
+
+
+
+
 @media screen and (max-width: 500px){
   h2{
     font-size: 30px;
@@ -839,12 +850,26 @@ div #group-duo{
     font-size:16px;
   }
 
+  .header-box{
+    box-sizing: border-box;
+    padding: 0 2vh;
+  }
+   header{
+    padding: 1.3vh 0;
+   }
+   
   #intro-box{
     padding: 30px 0;
   }
 
   .line{
     flex-basis: 100%;
+  }
+
+  .button-big{
+    font-weight: 700;
+    padding: 6px 12px;
+    box-shadow: 0px 3.5px 0px 0px var(--green_dark);
   }
 
   .button-skip{
@@ -888,5 +913,17 @@ div #group-duo{
     display: flex;
     flex-basis: 100%;
   overflow: auto;
+  }
+
+  .footer-container{
+    padding: 50px 3vh;
+    flex-direction: column-reverse;
+    gap: 4vh
+  }
+
+  #duo-liegt{ 
+    left: 70%;
+    width: 100px;
+    top: 35px;
   }
 }
