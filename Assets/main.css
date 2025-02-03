@@ -558,6 +558,12 @@ section{
   width: 1200px;
   height: 800px;
 }
+
+#GUIcontainer{
+  flex-basis: 75% ;
+  overflow-y: hidden;
+}
+
 /*Scrollytelling Rad*/
 #elements{
   max-width: 1200px;
@@ -731,6 +737,11 @@ div #group-duo{
   width: 55%;
 }
 
+#caseStudie{
+  width: 265px; 
+  margin: auto 0;
+}
+
 @media screen and (max-width: 500px){
   h2{
     font-size: 30px;
@@ -780,9 +791,14 @@ div #group-duo{
   }
 
   div #group-duo{
-    width: 100%; 
+    width: 10 0%; 
     justify-content: center; 
     display: flex;
+  }
+  
+  #caseStudie{
+    width: 150px;  
+    margin: auto 0;
   }
   
 }
