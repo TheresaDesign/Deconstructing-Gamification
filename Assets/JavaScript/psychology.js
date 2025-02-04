@@ -15,7 +15,7 @@ function handleResize() {
 
     // 2. update height und margin für figure
     var figureHeight = window.innerHeight / 1.5; // Höhe der Grafik
-    var figureMarginTop = window.innerHeight * 0.08; // Margin oben
+    var figureMarginTop = window.innerHeight * 0.15; // Margin oben auf 15%
 
     figure
         .style("height", figureHeight + "px")
