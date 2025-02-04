@@ -35,3 +35,65 @@ function centerScrollPosition(box) {
   box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Vertikal mittig
 }
 
+//GUI
+document.addEventListener("DOMContentLoaded", function () {
+  const showImageBtn = document.querySelector(".box-continue");
+  const modal = document.querySelector(".modalGUI");
+  const closeModal = document.querySelector(".close");
+
+  // Sicherstellen, dass das Modal standardmäßig geschlossen ist
+  modal.style.display = "none"; 
+
+  showImageBtn.addEventListener("click", function () {
+      modal.style.display = "flex"; // Modal öffnen
+  });
+
+  closeModal.addEventListener("click", function () {
+      modal.style.display = "none"; // Modal schließen
+  });
+
+  // Schließen bei Klick außerhalb des Bildes
+  modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+          modal.style.display = "none";
+      }
+  });
+});
+
+
+//modal elemente
+document.addEventListener("DOMContentLoaded", function () {
+  const showImageBtns = document.querySelectorAll(".elementpic");
+  const modal = document.querySelector(".image-modal");
+  const modalImage = document.querySelector(".modal-image");
+  const closeModal = document.querySelector(".close");
+
+  // Modal öffnen
+  showImageBtns.forEach(button => {
+      button.addEventListener("click", function () {
+          const imageSrc = button.getAttribute("data-image");
+          modalImage.src = imageSrc;
+          modal.style.display = "flex";
+      });
+  });
+
+  // Modal schließen per Button
+  if (closeModal) {
+      closeModal.addEventListener("click", function (e) {
+          e.stopPropagation(); // Verhindert, dass das Modal durch einen Klick auf sich selbst geschlossen wird
+          modal.style.display = "none";
+          modalImage.src = "";
+      });
+  }
+
+  // Modal schließen, wenn außerhalb des Bildes geklickt wird
+  modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+          modal.style.display = "none";
+          modalImage.src = "";
+      }
+  });
+
+  // Test, ob der Close-Button gefunden wurde
+  console.log("Close-Button gefunden:", closeModal);
+});

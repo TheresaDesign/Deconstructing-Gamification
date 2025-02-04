@@ -144,7 +144,7 @@ main{
     display: flex;
     max-width: 1200px;
     margin: auto;
-    padding: 0;
+    padding: 0 3vh;
     height: auto;
     flex-direction: column;
 }
@@ -178,7 +178,6 @@ header{
   max-width: 1200px;
   margin: auto;
   width: 100%;
-  justify-content: end;
   background-color: var(--grey4);
   padding: 0 20px;
   border-radius: 5px;
@@ -339,6 +338,7 @@ header{
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 5%;
+  padding: 0 3vh;
 }
 
 
@@ -419,6 +419,124 @@ section{
   color: var(--darkpurple);
   border: 1px solid var(--darkpurple);
   transform: translateY(3px); /* Visueller "Klick-Effekt" */
+}
+
+.continue {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 8px 15px;
+  text-transform: lowercase;
+  border-radius: 8px;
+  background-color: var(--white); 
+  color: var(--grey1);
+  border: 2px solid var(--grey1);
+  box-shadow: 0px 5px 0px 0px var(--grey1);
+  text-decoration: none; 
+  display: inline-block; 
+  cursor: pointer;
+  
+  align-items: center;
+  display: flex;
+  gap: 11%;
+  width: 112px;
+  justify-content: center;
+}
+
+.continue:hover {
+  background-color: var(--grey3); 
+  box-shadow: 0px 3px 0px 0px var(--grey1);
+  
+}
+.continue:active {
+  background-color: var(--white); 
+  box-shadow: 0px 2px 0px 0px var(--grey1); 
+  color: var(--grey1);
+  border: 1px solid var(--grey1);
+  transform: translateY(3px); /* Visueller "Klick-Effekt" */
+}
+
+.arrow-right{
+width:15px;
+}
+
+.box-continue{
+  display: none;
+  flex-direction: row-reverse; 
+  margin-top:20px
+}
+
+.elementpic {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 8px 15px;
+  text-transform: lowercase;
+  border-radius: 8px;
+  background-color: var(--white); 
+  color: var(--grey1);
+  border: 2px solid var(--grey1);
+  box-shadow: 0px 5px 0px 0px var(--grey1);
+  text-decoration: none; 
+  display: inline-block; 
+  cursor: pointer;
+  z-index: 2;
+  align-items: center;
+  display: flex;
+  gap: 11%;
+  width: 112px;
+  justify-content: center;
+}
+
+.elementpic:hover {
+  background-color: var(--grey3); 
+  box-shadow: 0px 3px 0px 0px var(--grey1);
+  
+}
+.elementpic:active {
+  background-color: var(--white); 
+  box-shadow: 0px 2px 0px 0px var(--grey1); 
+  color: var(--grey1);
+  border: 1px solid var(--grey1);
+  transform: translateY(3px); /* Visueller "Klick-Effekt" */
+}
+
+.box-elementpic{
+  display: none;
+  flex-direction: row-reverse; 
+  margin-top:20px
+}
+.image-modal {
+  display: none; /* Modal wird standardmäßig versteckt */
+}
+.modalGUI{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index:30;
+  
+}
+
+.scroll-imagemobile{
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  font-family: 'Nunito';
+  position: fixed;
+  top: 10vh;
+  left: 3vh;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 4000;
 }
 
 .button-small {
@@ -528,7 +646,7 @@ section{
 #deconstruct{
   max-width: 1200px;
   margin: auto;
-  padding: 0;
+  padding: 0 3vh;
 }
 
 .side-box-text{
@@ -557,6 +675,12 @@ section{
   width: 1200px;
   height: 800px;
 }
+
+#GUIcontainer{
+  flex-basis: 75% ;
+  overflow-y: hidden;
+}
+
 /*Scrollytelling Rad*/
 .dimension-all{
   flex-basis: 50%;
@@ -572,7 +696,7 @@ section{
 #elements{
   max-width: 1200px;
   margin: auto;
-  padding: 0;
+  padding: 0 3vh;
 }
 
 .stopper{
@@ -648,8 +772,8 @@ section{
   flex: 1;
 }
 .step div {
-  position: sticky; /* Sticky innerhalb von .step */
-  top: 20%; /* Startpunkt beim Scrollen */
+  position: sticky;
+  top: 20%; 
 }
 figure {
   position: -webkit-sticky;
@@ -688,11 +812,12 @@ figure p {
 
 
 .graphic {
-  display: none; /* Alle Grafiken standardmäßig ausblenden */
+  display: none;
 }
 
 .graphic.is-visible {
-  display: block; /* Sichtbar machen, wenn aktiv */
+
+  display: block; 
   width: inherit;
 }
 
@@ -700,6 +825,70 @@ figure p {
   scale: 0.2;
 }
 
+/*
+#scrolly {
+  position: relative;
+  background-color: #f3f3f3;
+  padding: 1rem;
+}
+
+article {
+  position: relative;
+  padding: 0;
+  max-width: 20rem;
+  margin: 0 auto;
+  color: #ffc800;
+}
+
+figure {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-color: #8a8a8a;
+  z-index: 0;
+}
+
+figure p {
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.step {
+  margin: 0 auto 2rem auto;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step.is-active p {
+  background-color: rgb(255, 183, 0);
+  color: #ff0000;
+}
+
+.step p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: #3b3b3b;
+}
+*/
 footer{
   background-color: var(--green_dark);
   color: var(--white);
@@ -720,4 +909,185 @@ footer{
   font-family: "Nunito";
   flex-grow: 0;
   flex-shrink: 0;
+}
+
+/*bilder*/
+#duo-weights{
+  width: 55%;
+}
+
+div #duo-party{
+  width: 50%; justify-content: center; display: flex;
+}
+
+#duo-party{
+  width: 50%;
+}
+
+div #group-duo{
+  width: 50%; 
+  justify-content: center; 
+  display: flex;
+}
+#group-duo{
+  width: 55%;
+}
+
+#caseStudie{
+  width: 265px; 
+  margin: auto 0;
+}
+
+#duo-liegt{
+  transform: scaleX(-1); 
+  left: 76%; 
+  position: relative; 
+  width: 200px; 
+  top: 115px;
+}
+
+
+
+
+
+@media screen and (max-width: 500px){
+  h2{
+    font-size: 30px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+
+  p{
+    font-size:16px;
+  }
+
+  .row{
+    flex-direction: column;
+  }
+
+  article{
+    width: 100%;
+    font-size:16px;
+  }
+
+  .header-box{
+    box-sizing: border-box;
+    padding: 0 2vh;
+  }
+   header{
+    padding: 1.3vh 0;
+   }
+
+  #intro-box{
+    padding: 30px 0;
+  }
+
+  .line{
+    flex-basis: 100%;
+  }
+
+  .button-big{
+    font-weight: 700;
+    padding: 6px 12px;
+    box-shadow: 0px 3.5px 0px 0px var(--green_dark);
+  }
+
+  .button-skip{
+    top: 68vh;
+  }
+
+  #img-guy{
+    display: none
+  }
+
+  #duo-weights{
+    width: 100%;
+  }
+  div #duo-party{
+    width: 100%; justify-content: center; display: flex;
+  }
+  #duo-party{
+    width: 100%;
+  }
+
+  div #group-duo{
+    width: 10 0%; 
+    justify-content: center; 
+    display: flex;
+  }
+  
+  #caseStudie{
+    width: 150px;  
+    margin: auto 0;
+  }
+
+  .box-continue{
+    display: flex;
+  }
+
+  .box-elementpic{
+    display: flex;
+  }
+
+  .element-image {
+    display: none; /* Bild verstecken */
+}
+.elementpic {
+  display: block; /* Button anzeigen */
+}
+
+  /* Modal-Design */
+  .image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4b4b4bcc;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.wheel-graphic{
+  display: none;
+}
+
+.wheel-text{
+  flex-basis: 100%;
+}
+
+.wheel-information{
+  height: fit-content;
+  margin: 30px 0;
+}
+  #GUIcontainer{
+    display: none;
+  }
+  
+  .modalGUI{
+    display: flex;
+    flex-basis: 100%;
+  overflow: auto;
+  }
+
+  .footer-container{
+    padding: 50px 3vh;
+    flex-direction: column-reverse;
+    gap: 4vh
+  }
+
+  #duo-liegt{ 
+    left: 70%;
+    width: 100px;
+    top: 35px;
+  }
 }
