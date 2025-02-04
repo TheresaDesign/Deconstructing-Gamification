@@ -649,6 +649,8 @@ figure {
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   z-index: 0;
+  display: flex;
+  justify-content: center;
 }
 
 figure p {
@@ -680,6 +682,7 @@ figure p {
 
 .graphic.is-visible {
   display: block; /* Sichtbar machen, wenn aktiv */
+  width: inherit;
 }
 
 #scrolly-img{
