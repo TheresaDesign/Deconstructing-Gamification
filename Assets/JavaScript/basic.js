@@ -59,3 +59,41 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
+
+
+//modal elemente
+document.addEventListener("DOMContentLoaded", function () {
+  const showImageBtns = document.querySelectorAll(".elementpic");
+  const modal = document.querySelector(".image-modal");
+  const modalImage = document.querySelector(".modal-image");
+  const closeModal = document.querySelector(".close");
+
+  // Modal öffnen
+  showImageBtns.forEach(button => {
+      button.addEventListener("click", function () {
+          const imageSrc = button.getAttribute("data-image");
+          modalImage.src = imageSrc;
+          modal.style.display = "flex";
+      });
+  });
+
+  // Modal schließen per Button
+  if (closeModal) {
+      closeModal.addEventListener("click", function (e) {
+          e.stopPropagation(); // Verhindert, dass das Modal durch einen Klick auf sich selbst geschlossen wird
+          modal.style.display = "none";
+          modalImage.src = "";
+      });
+  }
+
+  // Modal schließen, wenn außerhalb des Bildes geklickt wird
+  modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+          modal.style.display = "none";
+          modalImage.src = "";
+      }
+  });
+
+  // Test, ob der Close-Button gefunden wurde
+  console.log("Close-Button gefunden:", closeModal);
+});
