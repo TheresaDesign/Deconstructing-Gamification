@@ -456,6 +456,39 @@ section{
   transform: translateY(3px); /* Visueller "Klick-Effekt" */
 }
 
+.left {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 8px 15px;
+  text-transform: lowercase;
+  border-radius: 8px;
+  background-color: var(--white); 
+  color: var(--grey1);
+  border: 2px solid var(--grey1);
+  box-shadow: 0px 5px 0px 0px var(--grey1);
+  text-decoration: none; 
+  display: inline-block; 
+  cursor: pointer;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  margin: auto 10px;
+}
+
+.left:hover {
+  background-color: var(--grey3); 
+  box-shadow: 0px 3px 0px 0px var(--grey1);
+  
+}
+.left:active {
+  background-color: var(--white); 
+  box-shadow: 0px 2px 0px 0px var(--grey1); 
+  color: var(--grey1);
+  border: 1px solid var(--grey1);
+  transform: translateY(3px); /* Visueller "Klick-Effekt" */
+}
+
 .arrow-right{
 width:15px;
 }
@@ -684,6 +717,8 @@ width:15px;
 /*Scrollytelling Rad*/
 .dimension-all{
   flex-basis: 50%;
+  display: flex;
+  flex-direction: row;
 }
 .box-dimension{
   border: 3px solid var(--grey3);
@@ -693,6 +728,27 @@ width:15px;
   box-shadow: 0px 6px 0px 0px var(--grey3);
 }
 
+#performance{
+  background-color: var(--purple);
+}
+#ecological{
+  background-color: var(--red);
+}
+#social{
+  background-color: var(--yellow);
+}
+#personal{
+  background-color: var(--green_dark);
+}
+#fictional{
+  background-color: var(--blue);
+}
+
+.dimension{
+  border-radius: 10px;
+  width: 10%;
+  height: 10px;
+}
 #elements{
   max-width: 1200px;
   margin: auto;

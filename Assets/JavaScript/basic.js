@@ -97,3 +97,80 @@ document.addEventListener("DOMContentLoaded", function () {
   // Test, ob der Close-Button gefunden wurde
   console.log("Close-Button gefunden:", closeModal);
 });
+
+
+//script diemnsions
+const texts = [
+  {
+    id: "performance",
+    title: "Performance / Measurements",
+    content: "All elements within this dimension provide some form of feedback to the user. Whether it's a progress bar within a course or the hearts indicating how many mistakes have been made—this dimension ensures the user receives constant feedback. If missing, learners may feel disoriented, as their actions lack visible responses.",
+    usage: "5/5 elements are heavily used by Duolingo"
+  },
+  {
+    id: "ecological",
+    title: "Ecological",
+    content: "The relevance of this dimension heavily depends on the application or game in question. These elements represent unique characteristics that some games incorporate, while others may not, or they may implement them in entirely different ways. If this dimension is absent, the game environment may feel static, reducing engagement as it lacks meaningful interaction with the user.",
+    usage: "3/5 elements are moderately used by Duolingo"
+  },
+  {
+    id: "social",
+    title: "Social",
+    content: "This dimension focuses on interaction between players. Its elements are designed to encourage engagement and communication. If there is no opportunity or necessity for users to interact with one another, long-term isolation may occur, which can hinder the learning experience. This category supports both extrinsic motivation and intrinsic motivation, as social exchange is particularly important in a learning context.",
+    usage: "4/4 elements are widely used by Duolingo"
+  },
+  {
+    id: "personal",
+    title: "Personal",
+    content: "This dimension revolves around how a user engages with their environment and to what extent they can personalize and shape it. If missing, it can lead to demotivation, as the user's actions within the game lack personal impact or purpose.",
+    usage: "5/5 elements are heavily used by Duolingo"
+  },
+  {
+    id: "fictional",
+    title: "Fictional Engagement",
+    content: "This dimension is about creating context. It considers both the user’s perspective (narrative) and the environment (storytelling) to form a cohesive experience. If this dimension—or even just one of its elements—is missing, the sense of meaning and purpose within the immersive environment is lost. This, in turn, affects the overall quality of the user experience.",
+    usage: "0/2 elements are used by Duolingo"
+  }
+];
+
+let currentIndex = 0;
+
+function updateContent() {
+  const current = texts[currentIndex];
+  const activeDimension = document.getElementById(current.id);
+
+  // Setze den Textinhalt
+  document.querySelector(".box-dimension h4").textContent = current.title;
+  document.querySelector(".box-dimension p").textContent = current.content;
+  document.querySelector("#bold span").textContent = current.usage;
+
+  // Hole die Hintergrundfarbe des aktiven Elements
+  const bgColor = window.getComputedStyle(activeDimension).backgroundColor;
+
+  // Setze die Farbe der Überschrift
+  document.querySelector(".box-dimension h4").style.color = bgColor;
+  document.querySelector(".box-dimension p span").style.color = bgColor;
+
+  // Alle Dimensionen zurücksetzen
+  document.querySelectorAll(".dimension").forEach(dim => {
+    dim.style.width = "10%"; // Standardgröße
+    dim.style.transition = "width 0.3s ease";
+  });
+
+  // Aktuelle Dimension vergrößern
+  activeDimension.style.width = "25%";
+}
+
+
+
+
+// Event Listener für Buttons
+document.querySelectorAll(".left").forEach((button, index) => {
+  button.addEventListener("click", () => {
+    currentIndex = index === 0 ? (currentIndex - 1 + texts.length) % texts.length : (currentIndex + 1) % texts.length;
+    updateContent();
+  });
+});
+
+// Starte mit dem ersten Text
+updateContent();

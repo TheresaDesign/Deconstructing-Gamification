@@ -179,8 +179,7 @@
       <div class="row">
         <div class="side-box-text">
           <h3><span id="thin">The </span>GUI Ripping</h3>
-          <article style="width: 100%;  margin-top: 20px;">
-            GUI Ripping is a method used to analyze and deconstruct the graphical user interface (GUI) of software. We closely examined Duolingo’s home screen, a course, and the profile section to identify where microinteractions such as animations, visual, or haptic feedback are utilized. We observed that these elements are strategically implemented in areas where users require extra motivation, such as during particularly challenging tasks or when sharing content. The insights gained from this analysis feed directly into our ongoing investigation of Duolingo's gamification strategies, helping us better understand the impact of these design elements.
+          <article style="width: 100%;  margin-top: 20px;">GUI ripping is a method used to analyze and deconstruct the graphical user interface (GUI) of software. A close examination of the Duolingo home screen, a course, and the profile area was conducted to ascertain the presence of micro-interactions, such as animations, visual or haptic feedback. The objective was to gain an overview of the most relevant areas of the interface to identify patterns or recurring mechanics.
           </article>
           <div style="margin-top: 15px;">
             <h4 id="bold">legend</h4>
@@ -202,6 +201,11 @@
             <div class="row" style="align-items: center;">
               <article style="color: var(grey3); font-weight: bold; font-size: 10px; width: 40px ; margin-right: 10px; text-align: center;">NEW</article>
               <article style="width:100%">user opens new page</article>
+            </div>
+
+            <div class="row" style="align-items: center;">
+              <article style="color: var(grey3); font-weight: bold; font-size: 10px; width: 40px ; margin-right: 10px; text-align: center;">LEAVE</article>
+              <article style="width:100%">user leaves the app</article>
             </div>
           </div>
           <div class="box-continue">
@@ -5353,12 +5357,14 @@
           
         </div>
         
-
-        
-
       </div>
         
-      
+      <article>
+        <h3>findings</h3>
+        <p>Our analysis revealed that special feedback mechanisms, such as vibrations, sounds, and animations, are strategically employed in areas where users require additional motivation, particularly in the context of particularly challenging tasks. Animations constitute an exception to this pattern, as they are ubiquitous and play a significant role in the overall Duolingo identity. Every character, including the user's avatar, exhibits movement, and the characters within the courses react to the user's actions. For instance, when users are required to speak, the characters listen attentively, and when typing is selected, the characters repeat the typed words at the user's pace. </p>
+        <p>Vibrations and sounds are utilized less frequently, with different sounds activating depending on whether the user is solving correctly, incorrectly, or has completed a lesson.Outside of courses, users do not encounter sounds; they are exclusive to lessons.The same applies to vibrations, which are the rarest form of feedback. This feedback is only received in the event of a particularly challenging task, such as formulating a complete sentence without any instructions. The feedback window undergoes a transformation from a square to a cloud-like shape.</p>
+        <p>The insights derived from this analysis and the subsequent collection of elements then inform our subsequent analysis. In the subsequent step, we categorize the elements and examine their effect.</p>
+      </article>
 
     </section>
 
@@ -5414,17 +5420,32 @@
             <p>The various elements and element groups are categorized into different dimensions according to A. M. Toda. There are five in total: Performance, Ecological, Social, Personal, and Fictional. These categories emphasize different aspects, such as the game environment, interaction, or the player themselves. This classification allows for a more structured analysis of elements while also making it easier to identify which aspects of gamification an app or platform prioritizes.</p>
           </article>
           <div class="dimension-all">
-            <!--button-->
-            <div class="column" > 
-              <!--bunte streifen-->
+            <button class="left">
+              <svg class="arrow-right" viewBox="0 0 91 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M43.7633 85.5266L9.94974 51.713C7.21607 48.9794 7.21607 44.5472 9.94974 41.8135L43.7633 8" stroke="#777777" stroke-width="15" stroke-linecap="round"/>
+                <path d="M11.2142 46.7633L82.6274 47.0824" stroke="#777777" stroke-width="15" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="column" style="gap:10px"> 
+              <div class="row" style="gap:5px">
+                <div class="dimension" id="performance"></div>
+                <div class="dimension" id="ecological"></div>
+                <div class="dimension" id="social"></div>
+                <div class="dimension" id="personal"></div>
+                <div class="dimension" id="fictional"></div>
+              </div>
               <div class="box-dimension">
-                <h4 style="color: var(--purple);">Performance / Measurements</h4>
+                <h4>Performance / Measurements</h4>
                 <p>All elements within this dimension provide some form of feedback to the user. Whether it's a progress bar within a course or the hearts indicating how many mistakes have been made—this dimension ensures the user receives constant feedback. If missing, learners may feel disoriented, as their actions lack visible responses.</p>
-                <p id="bold"><span style="color: var(--purple);">5/5 elements</span> are heavily used by Duolingo</p>
-
+                <p id="bold"><span>5/5 elements</span> are heavily used by Duolingo</p>
               </div>
             </div>
-            <!--button-->
+            <button class="left">
+              <svg class="arrow-right" viewBox="0 0 91 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46.8137 85.577L80.6272 51.7635C83.3609 49.0298 83.3609 44.5976 80.6272 41.864L46.8137 8.05044" stroke="#777777" stroke-width="15" stroke-linecap="round"/>
+                <path d="M79.3628 46.8137L7.94952 47.1328" stroke="#777777" stroke-width="15" stroke-linecap="round"/>
+              </svg>
+            </button>
           </div>
         </div>
         
