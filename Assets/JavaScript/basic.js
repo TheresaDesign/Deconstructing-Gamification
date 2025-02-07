@@ -1,11 +1,4 @@
 //script für das Onboarding
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    document.body.classList.add("scrolled");
-  }
-});
-
-
 
 
 // Javascript für das scrollen des deconstructing teils

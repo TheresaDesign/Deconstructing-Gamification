@@ -142,18 +142,19 @@ body{
 }
 
 .firstimg{
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
-  transform: translateY(0);
-  transition: transform 1s ease-out;
+  overflow: hidden;
+  
 }
 
 .firstimg img{
   width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: bottom;
 }
 
 .scrolled .firstimg {
@@ -770,8 +771,8 @@ width:15px;
   margin: auto 0;
 }
 
-#phone{
-  display: none;
+.phone{
+  display: none ;
 }
 #elements{
   max-width: 1200px;
@@ -1124,11 +1125,11 @@ div #group-duo{
   margin: auto 0px;
 }
 
-#phone{
+.phone{
   display: block;
 }
 
-#desktop{
+.desktop{
   display: none;
 }
 
