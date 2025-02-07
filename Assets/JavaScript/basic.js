@@ -2,12 +2,12 @@
 
 
 // Javascript für das scrollen des deconstructing teils
-window.onload = function() {
-  const box = document.getElementById('scrollBox');
-  centerScrollPosition(box); // Scrollposition beim Laden der Seite zentrieren
-};
+document.addEventListener("DOMContentLoaded", function () {
+  const box = document.getElementById("scrollBox");
+  centerScrollPosition(box);
+});
 
-let scale = 1; // Initialer Zoom-Wert
+let scale = 1; // Startzoom-Wert
 
 function zoomIn() {
   scale += 0.1; // Vergrößern
@@ -15,7 +15,7 @@ function zoomIn() {
 }
 
 function zoomOut() {
-  scale -= 0.1; // Verkleinern
+  scale = Math.max(0.5, scale - 0.1); // Mindestzoom bei 0.5
   applyZoom();
 }
 
@@ -23,20 +23,21 @@ function resetZoom() {
   scale = 1; // Zurück auf Standardzoom
   applyZoom();
 
-  const box = document.getElementById('scrollBox');
+  const box = document.getElementById("scrollBox");
   centerScrollPosition(box); // Scrollposition zurücksetzen
 }
 
 function applyZoom() {
-  const gui = document.getElementById('gui');
+  const gui = document.getElementById("gui");
   gui.style.transform = `scale(${scale})`;
-  gui.style.transformOrigin = 'center'; // Zoom von der Mitte aus
+  gui.style.transformOrigin = "center"; // Zoom von der Mitte aus
 }
 
 function centerScrollPosition(box) {
   box.scrollLeft = (box.scrollWidth - box.clientWidth) / 2; // Horizontal mittig
   box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Vertikal mittig
 }
+
 
 //GUI
 document.addEventListener("DOMContentLoaded", function () {
@@ -102,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//script diemnsions
+//script dimensions
 const texts = [
   {
     id: "performance",
