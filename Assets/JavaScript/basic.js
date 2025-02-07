@@ -1,3 +1,13 @@
+//script für das Onboarding
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    document.body.classList.add("scrolled");
+  }
+});
+
+
+
+
 // Javascript für das scrollen des deconstructing teils
 window.onload = function() {
   const box = document.getElementById('scrollBox');
@@ -153,12 +163,12 @@ function updateContent() {
 
   // Alle Dimensionen zurücksetzen
   document.querySelectorAll(".dimension").forEach(dim => {
-    dim.style.width = "10%"; // Standardgröße
+    dim.style.width = "15%"; // Standardgröße
     dim.style.transition = "width 0.3s ease";
   });
 
   // Aktuelle Dimension vergrößern
-  activeDimension.style.width = "25%";
+  activeDimension.style.width = "40%";
 }
 
 

@@ -140,6 +140,25 @@ body{
   padding: 0;
   margin: 0;
 }
+
+.firstimg{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  transform: translateY(0);
+  transition: transform 1s ease-out;
+}
+
+.firstimg img{
+  width: 100%;
+}
+
+.scrolled .firstimg {
+  transform: translateY(-100%);
+}
 main{
     display: flex;
     max-width: 1200px;
@@ -164,7 +183,7 @@ main{
   justify-content: center;
   width: 100%;
   margin-top: 5px;
-  z-index: 1000;
+  z-index: 100;
 }
 header{
     display: flex;
@@ -465,20 +484,20 @@ section{
   border-radius: 8px;
   background-color: var(--white); 
   color: var(--grey1);
-  border: 2px solid var(--grey1);
-  box-shadow: 0px 5px 0px 0px var(--grey1);
+  border: 2px solid var(--grey3);
+  box-shadow: 0px 5px 0px 0px var(--grey3);
   text-decoration: none; 
   display: inline-block; 
   cursor: pointer;
   height: 40px;
   align-items: center;
   display: flex;
-  margin: auto 10px;
+  margin: 40% 10px auto 10px;
 }
 
 .left:hover {
   background-color: var(--grey3); 
-  box-shadow: 0px 3px 0px 0px var(--grey1);
+  box-shadow: 0px 3px 0px 0px var(--grey2);
   
 }
 .left:active {
@@ -748,6 +767,11 @@ width:15px;
   border-radius: 10px;
   width: 10%;
   height: 10px;
+  margin: auto 0;
+}
+
+#phone{
+  display: none;
 }
 #elements{
   max-width: 1200px;
@@ -1092,6 +1116,20 @@ div #group-duo{
 }
 .elementpic {
   display: block; /* Button anzeigen */
+}
+
+.left{
+  padding: 3px 8px 0px 8px;
+  height: 30px;
+  margin: auto 0px;
+}
+
+#phone{
+  display: block;
+}
+
+#desktop{
+  display: none;
 }
 
   /* Modal-Design */
