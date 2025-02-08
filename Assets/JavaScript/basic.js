@@ -38,6 +38,25 @@ function centerScrollPosition(box) {
   box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Vertikal mittig
 }
 
+//Ton bei Videos
+document.addEventListener("DOMContentLoaded", function () {
+  const videos = document.querySelectorAll("video");
+
+  videos.forEach(video => {
+    console.log("Video gefunden:", video); // Debugging: Prüft, ob beide Videos erkannt werden
+
+    video.addEventListener("click", function () {
+      console.log("Video geklickt:", video); // Debugging: Zeigt Klicks an
+      if (video.muted) {
+        video.muted = false;
+        video.play();
+      } else {
+        video.muted = true;
+      }
+    });
+  });
+});
+
 
 //GUI
 document.addEventListener("DOMContentLoaded", function () {
