@@ -117,13 +117,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Modal schließen per Button
   if (closeModal) {
-      closeModal.addEventListener("click", function (e) {
-          e.stopPropagation();
-          modal.style.display = "none";
-          modalImage.src = "";
-          modalVideo.pause();
-          modalVideo.currentTime = 0;
-      });
+    console.log("Close-Button gefunden!");
+    closeModal.addEventListener("click", function (e) {
+        console.log("Close-Button wurde geklickt!");
+        modal.style.display = "none";
+        modalImage.src = "";
+    });
+  } else {
+    console.log("Close-Button nicht gefunden!");
   }
 
   // Modal schließen, wenn außerhalb des Inhalts geklickt wird
@@ -137,6 +138,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const closeButtons = document.querySelectorAll(".close"); // Alle Close-Buttons holen
+  const modals = document.querySelectorAll(".image-modal"); // Alle Modals holen
+
+  closeButtons.forEach(closeButton => {
+      closeButton.addEventListener("click", function (e) {
+          console.log("Close-Button wurde geklickt!"); // Debugging-Check
+          e.stopPropagation(); // Verhindert, dass das Modal sich durch einen anderen Klick schließt
+
+          // Nächstes Eltern-Modal finden und schließen
+          const modal = closeButton.closest(".image-modal");
+          if (modal) {
+              modal.style.display = "none";
+          }
+      });
+  });
+
+  // Optional: Modal durch Klick außerhalb schließen
+  modals.forEach(modal => {
+      modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+              modal.style.display = "none";
+          }
+      });
+  });
+});
 
 
 //script dimensions

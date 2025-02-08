@@ -560,7 +560,8 @@ width:15px;
   margin-top:20px
 }
 .image-modal {
-  display: none; /* Modal wird standardmäßig versteckt */
+  display: none; 
+    pointer-events: auto; 
 }
 .modalGUI{
   display: none;
