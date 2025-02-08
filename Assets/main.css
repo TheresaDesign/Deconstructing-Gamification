@@ -1005,13 +1005,8 @@ div #duo-party{
   width: 50%;
 }
 
-div #group-duo{
-  width: 50%; 
-  justify-content: center; 
-  display: flex;
-}
 #group-duo{
-  width: 55%;
+  width: 50%; 
 }
 
 #caseStudie{
@@ -1093,10 +1088,8 @@ div #group-duo{
     width: 100%;
   }
 
-  div #group-duo{
-    width: 10 0%; 
-    justify-content: center; 
-    display: flex;
+  #group-duo{
+    width: 100%; 
   }
   
   #caseStudie{
