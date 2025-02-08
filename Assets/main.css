@@ -1145,6 +1145,13 @@ div #duo-party{
     max-height: 90%;
 }
 
+.modal-video {
+  display: none; /* Standardmäßig versteckt */
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 10px;
+}
+
 .wheel-graphic{
   display: none;
 }

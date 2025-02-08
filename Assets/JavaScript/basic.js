@@ -86,16 +86,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //modal elemente
 document.addEventListener("DOMContentLoaded", function () {
-  const showImageBtns = document.querySelectorAll(".elementpic");
+  const showElementBtns = document.querySelectorAll(".elementpic");
   const modal = document.querySelector(".image-modal");
   const modalImage = document.querySelector(".modal-image");
+  const modalVideo = document.querySelector(".modal-video");
+  const modalVideoSource = modalVideo.querySelector("source");
   const closeModal = document.querySelector(".close");
 
-  // Modal öffnen
-  showImageBtns.forEach(button => {
+  showElementBtns.forEach(button => {
       button.addEventListener("click", function () {
-          const imageSrc = button.getAttribute("data-image");
-          modalImage.src = imageSrc;
+          const mediaSrc = button.getAttribute("data-image");
+
+          if (mediaSrc.endsWith(".mp4")) { 
+              // VIDEO ANZEIGEN
+              modalImage.style.display = "none";  // Bild verstecken
+              modalVideo.style.display = "block"; // Video anzeigen
+              modalVideoSource.src = mediaSrc;
+              modalVideo.load();  // Video neu laden
+              modalVideo.play();  // Autoplay starten
+          } else { 
+              // BILD ANZEIGEN
+              modalVideo.style.display = "none"; // Video verstecken
+              modalImage.style.display = "block"; // Bild anzeigen
+              modalImage.src = mediaSrc;
+          }
+
           modal.style.display = "flex";
       });
   });
@@ -103,23 +118,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // Modal schließen per Button
   if (closeModal) {
       closeModal.addEventListener("click", function (e) {
-          e.stopPropagation(); // Verhindert, dass das Modal durch einen Klick auf sich selbst geschlossen wird
+          e.stopPropagation();
           modal.style.display = "none";
           modalImage.src = "";
+          modalVideo.pause();
+          modalVideo.currentTime = 0;
       });
   }
 
-  // Modal schließen, wenn außerhalb des Bildes geklickt wird
+  // Modal schließen, wenn außerhalb des Inhalts geklickt wird
   modal.addEventListener("click", function (e) {
       if (e.target === modal) {
           modal.style.display = "none";
           modalImage.src = "";
+          modalVideo.pause();
+          modalVideo.currentTime = 0;
       }
   });
-
-  // Test, ob der Close-Button gefunden wurde
-  console.log("Close-Button gefunden:", closeModal);
 });
+
 
 
 //script dimensions
