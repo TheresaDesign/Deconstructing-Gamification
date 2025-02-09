@@ -1,42 +1,7 @@
 //script für das Onboarding
 
 
-// Javascript für das scrollen des deconstructing teils
-document.addEventListener("DOMContentLoaded", function () {
-  const box = document.getElementById("scrollBox");
-  centerScrollPosition(box);
-});
 
-let scale = 1; // Startzoom-Wert
-
-function zoomIn() {
-  scale += 0.1; // Vergrößern
-  applyZoom();
-}
-
-function zoomOut() {
-  scale = Math.max(0.5, scale - 0.1); // Mindestzoom bei 0.5
-  applyZoom();
-}
-
-function resetZoom() {
-  scale = 1; // Zurück auf Standardzoom
-  applyZoom();
-
-  const box = document.getElementById("scrollBox");
-  centerScrollPosition(box); // Scrollposition zurücksetzen
-}
-
-function applyZoom() {
-  const gui = document.getElementById("gui");
-  gui.style.transform = `scale(${scale})`;
-  gui.style.transformOrigin = "center"; // Zoom von der Mitte aus
-}
-
-function centerScrollPosition(box) {
-  box.scrollLeft = (box.scrollWidth - box.clientWidth) / 2; // Horizontal mittig
-  box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Vertikal mittig
-}
 
 //Ton bei Videos
 document.addEventListener("DOMContentLoaded", function () {
@@ -241,3 +206,58 @@ document.querySelectorAll(".left").forEach((button, index) => {
 
 // Starte mit dem ersten Text
 updateContent();
+
+
+
+// Javascript für das scrollen des GUIs
+window.addEventListener("load", function () {
+  console.log("Seite vollständig geladen!");
+  console.log(document.getElementById("gui")); // Test, ob das Element jetzt gefunden wird
+  
+  const box = document.getElementById("scrollBox");
+  if (box) {
+    centerScrollPosition(box);
+  } else {
+    console.error("scrollBox nicht gefunden!");
+  }
+});
+
+
+let scale = 1; // Startzoom-Wert
+
+function zoomIn() {
+  scale += 0.1; // Vergrößern
+  applyZoom();
+}
+
+function zoomOut() {
+  scale = Math.max(0.5, scale - 0.1); // Mindestzoom bei 0.5
+  applyZoom();
+}
+
+function resetZoom() {
+  scale = 1; // Zurück auf Standardzoom
+  applyZoom();
+
+  const box = document.getElementById("scrollBox");
+  centerScrollPosition(box); // Scrollposition zurücksetzen
+}
+
+function applyZoom() {
+  const gui = document.getElementById("gui");
+  gui.style.transform = `scale(${scale})`;
+  gui.style.transformOrigin = "center"; // Zoom von der Mitte aus
+}
+
+function centerScrollPosition(box) {
+  box.scrollLeft = (box.scrollWidth - box.clientWidth) / 2; // Horizontal mittig
+  box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Vertikal mittig
+}
+const observer = new MutationObserver(() => {
+  console.log("DOM geändert!");
+  console.log(document.getElementById("gui"));
+});
+observer.observe(document.body, { childList: true, subtree: true });
+
+const guiElement = document.getElementById("gui") || document.getElementById("gui-mobile");
+console.log(guiElement);

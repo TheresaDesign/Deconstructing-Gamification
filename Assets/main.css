@@ -593,6 +593,17 @@ width:15px;
   z-index: 4000;
 }
 
+.closeelements {
+  font-family: 'Nunito';
+  position: fixed;
+  top: 10vh;
+  left: 3vh;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 4000;
+}
+
 .button-small {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
