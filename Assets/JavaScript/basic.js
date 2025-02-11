@@ -211,9 +211,6 @@ updateContent();
 
 // Javascript für das scrollen des GUIs
 window.addEventListener("load", function () {
-  console.log("Seite vollständig geladen!");
-  console.log(document.getElementById("gui")); // Test, ob das Element jetzt gefunden wird
-  
   const box = document.getElementById("scrollBox");
   if (box) {
     centerScrollPosition(box);
@@ -222,7 +219,14 @@ window.addEventListener("load", function () {
   }
 });
 
+function centerScrollPosition(box) {
+  const gui = document.getElementById("gui-mobile");
+  const scaledWidth = gui.offsetWidth * scale;
+  const scaledHeight = gui.offsetHeight * scale;
 
+  box.scrollLeft = (scaledWidth - box.clientWidth) / 2;
+  box.scrollTop = (scaledHeight - box.clientHeight) / 2;
+}
 let scale = 1; // Startzoom-Wert
 
 function zoomIn() {
@@ -239,25 +243,16 @@ function resetZoom() {
   scale = 1; // Zurück auf Standardzoom
   applyZoom();
 
-  const box = document.getElementById("scrollBox");
-  centerScrollPosition(box); // Scrollposition zurücksetzen
+  setTimeout(() => {
+    const box = document.getElementById("scrollBox");
+    centerScrollPosition(box); // Scrollposition zurücksetzen
+  }, 50); // Kleiner Timeout, um Zoom zuerst anzuwenden
 }
 
 function applyZoom() {
-  const gui = document.getElementById("gui");
+  const gui = document.getElementById("gui-mobile");
   gui.style.transform = `scale(${scale})`;
   gui.style.transformOrigin = "center"; // Zoom von der Mitte aus
 }
 
-function centerScrollPosition(box) {
-  box.scrollLeft = (box.scrollWidth - box.clientWidth) / 2; // Horizontal mittig
-  box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Vertikal mittig
-}
-const observer = new MutationObserver(() => {
-  console.log("DOM geändert!");
-  console.log(document.getElementById("gui"));
-});
-observer.observe(document.body, { childList: true, subtree: true });
 
-const guiElement = document.getElementById("gui") || document.getElementById("gui-mobile");
-console.log(guiElement);

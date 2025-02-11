@@ -724,11 +724,12 @@ width:15px;
   border-radius: 20px;
   box-shadow: 0px 6px 0px 0px var(--grey3);
   flex-shrink: 0;
+  height: fit-content;
 }
 
 .side-box-image{
   display: flex;
-  flex-basis: 100%;
+  flex-basis: 75%;
   overflow: auto;
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
