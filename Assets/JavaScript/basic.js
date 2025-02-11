@@ -210,49 +210,64 @@ updateContent();
 
 
 // Javascript für das scrollen des GUIs
+let scale = 1; // Startzoom-Wert (nach oben verschoben)
+
 window.addEventListener("load", function () {
-  const box = document.getElementById("scrollBox");
-  if (box) {
-    centerScrollPosition(box);
-  } else {
-    console.error("scrollBox nicht gefunden!");
-  }
+  setTimeout(() => {
+    const box = document.getElementById("scrollBox");
+    if (box) {
+      centerScrollPosition(box);
+    } else {
+      console.error("scrollBox nicht gefunden!");
+    }
+  }, 100);
 });
 
 function centerScrollPosition(box) {
   const gui = document.getElementById("gui-mobile");
-  const scaledWidth = gui.offsetWidth * scale;
-  const scaledHeight = gui.offsetHeight * scale;
+
+  if (!gui) {
+    console.error("gui-mobile nicht gefunden!");
+    return;
+  }
+
+  const scaledWidth = gui.scrollWidth * scale;
+  const scaledHeight = gui.scrollHeight * scale;
 
   box.scrollLeft = (scaledWidth - box.clientWidth) / 2;
   box.scrollTop = (scaledHeight - box.clientHeight) / 2;
 }
-let scale = 1; // Startzoom-Wert
 
 function zoomIn() {
-  scale += 0.1; // Vergrößern
+  scale += 0.1;
   applyZoom();
 }
 
 function zoomOut() {
-  scale = Math.max(0.5, scale - 0.1); // Mindestzoom bei 0.5
+  scale = Math.max(0.5, scale - 0.1);
   applyZoom();
 }
 
 function resetZoom() {
-  scale = 1; // Zurück auf Standardzoom
+  scale = 1;
   applyZoom();
 
   setTimeout(() => {
     const box = document.getElementById("scrollBox");
-    centerScrollPosition(box); // Scrollposition zurücksetzen
-  }, 50); // Kleiner Timeout, um Zoom zuerst anzuwenden
+    if (box) {
+      centerScrollPosition(box);
+    }
+  }, 50);
 }
 
 function applyZoom() {
   const gui = document.getElementById("gui-mobile");
   gui.style.transform = `scale(${scale})`;
-  gui.style.transformOrigin = "center"; // Zoom von der Mitte aus
+  gui.style.transformOrigin = "center";
+
+  // Nach dem Zoomen erneut scrollen
+  setTimeout(() => {
+    const box = document.getElementById("scrollBox");
+    centerScrollPosition(box);
+  }, 50);
 }
-
-
