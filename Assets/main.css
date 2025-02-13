@@ -351,7 +351,7 @@ header{
   padding: 100px 0;
 }
 
-#intro_content{
+.intro_content{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1180,9 +1180,48 @@ div #duo-party{
   top: 115px;
 }
 
+/*about page*/
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  padding: 0 3vh;
+  align-items: center;
+}
 
+.about-main{
+  color: var(--green_dark);
+}
 
+.card{
+  display: flex;
+  flex-basis: 33%;
+  flex-direction: column;
+}
 
+.imageBig-box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.imageBig{
+  border-radius: 20px;
+  width: 50%;
+}
+.image{
+  border-radius: 10px;
+  background-color: #4b4b4b;
+  width: 100%;
+  height: 200px;
+}
+
+.imageSmall{
+  width: inherit;
+}
 
 @media screen and (max-width: 500px){
   h2{
