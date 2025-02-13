@@ -145,7 +145,7 @@ body{
   position: relative;
   width: 100vw;
   height: 100vh;
-  z-index: 1000;
+  z-index: 1001;
   overflow: hidden;
   
 }
@@ -191,7 +191,74 @@ header{
     justify-content: flex-end;
     padding: 2% 0;
 }
+.menu-box{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--grey3);
+  color: var(--grey1);
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px 0px var(--grey2);
+  padding: 8px 17px 8px 15px;
+  gap: 10px;
+  align-items: center;
+  width: fit-content;
+  transition: background-color 0.1s ease-in-out;
+}
 
+.menu-box div:hover{
+  color: var(--white);
+}
+
+.menu{
+  gap: 10px;
+}
+
+.menu-introduction:hover {
+  background-color: var(--green_light);
+  box-shadow: 0px 4px 0px 0px var(--green_dark);
+}
+
+.menu-gamification:hover {
+  background-color: var(--red);
+  box-shadow: 0px 4px 0px 0px var(--darkred);
+}
+
+.menu-deconstruct:hover {
+  background-color: var(--yellow);
+  box-shadow: 0px 4px 0px 0px var(--orange);
+}
+
+.menu-elements:hover {
+  background-color: var(--purple);
+  box-shadow: 0px 4px 0px 0px var(--darkpurple);
+}
+
+.menu-psycho:hover {
+  background-color: var(--orange);
+  box-shadow: 0px 4px 0px 0px var(--darkorange);
+}
+
+.menu-effectiveness:hover {
+  background-color: var(--blue);
+  box-shadow: 0px 4px 0px 0px var(--darkerblue);
+}
+
+.menu-conclusion:hover {
+  background-color: var(--green_dark);
+  box-shadow: 0px 4px 0px 0px var(--green_light);
+}
+
+.menu-link{
+  color: var(--grey1);
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.menu-link:hover{
+  color: var(--white);
+}
 .header-content{
   display: flex;
   flex-direction: row;
@@ -205,114 +272,25 @@ header{
   justify-content: space-between;
 }
 
-.chapter-menu {
+.side-menu{
   display: flex;
+  position: fixed;
+  top:15%;
   flex-direction: column;
-  justify-content: center;
+  gap:20px;
+  right: 5%;
+  z-index: 1000;
 }
 
-.chapter-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.menu-dot{
+  width:35px;
+  height:35px;
   display: flex;
-  flex-direction: row;
-  gap: 35px; 
+  box-shadow: 0px 4px 0px 0px var(--grey2);
+  background-color: var(--grey3);
+  border-radius: 25px;
+  align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-.chapter-menu ul::before {
-  content: '';
-  position: absolute;
-  top: -150px;
-  transform: rotate(90deg);
-  width: 2px;
-  background-color: var(--grey2);
-  z-index: -1;
-  height: 318px;
-}
-
-.chapter-point {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  background-color: var(--grey2);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0px 3px 0px 0px var(--grey1);
-}
-
-
-.chapter-point.visited {
-  background-color: var(--chapter-color);
-  box-shadow: 0px 3px 0px 0px var(--chapter-color);
-}
-
-.chapter-point.active {
-  width: 25px; 
-  height: 25px;
-  top: -4px;
-}
-
-.chapter-point:hover {
-  background-color: var(--chapter-color);
-  transform: scale(1.2); 
-}
- 
-.chapter-point::after {
-  content: attr(data-title);
-  position: absolute;
-  left:50%;
-  z-index: 200;
-  transform: translateY(-50%);
-  background-color: var(--grey4);
-  color: var(--green_light);
-  box-shadow: 0px 5px 0px 0px var(--green_dark);
-  font-size: 13px;
-  font-family: "Nunito";
-  padding: 4px 8px;
-  border: 1px solid var(--green_dark);
-  border-radius: 4px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-  text-align: center;
-  max-width: 70px;
-}
-
-.chapter-point:hover::after {
-  opacity: 1;
-}
-
-.chapter-intro.visited {
-  background-color: var(--green_light);
-  box-shadow: 0px 3px 0px 0px var(--green_dark);
-}
-
-.chapter-deconstruct.visited {
-  background-color: var(--yellow);
-  box-shadow: 0px 3px 0px 0px var(--orange);
-}
-
-.chapter-elements.visited {
-  background-color: var(--purple); 
-  box-shadow: 0px 3px 0px 0px var(--darkblue);
-}
-
-.chapter-psycho.visited {
-  background-color: var(--orange);
-  box-shadow: 0px 3px 0px 0px var(--red);
-}
-
-.chapter-critic.visited {
-  background-color: var(--blue);
-  box-shadow: 0px 3px 0px 0px var(--darkblue);
-}
-
-.chapter-conclusion.visited {
-  background-color: #8a2be2; /* Blue Violet */
 }
 
 .title{
@@ -1145,11 +1123,6 @@ footer{
   flex-shrink: 0;
 }
 
-/*bilder*/
-
-.avatar{
-
-}
 
 #duo-weights{
   width: 55%;

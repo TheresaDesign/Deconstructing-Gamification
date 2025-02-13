@@ -23,9 +23,9 @@ farnooshs Quellen:
 
 About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz alle Tools, Rahmenwerke oder Methoden, die in der Analyse verwendet werden (z. B. UI Ripping, Benutzerumfragen).
 
-Phonecall video
 
 - research Question anpassen
+- bubbles am anfang manchmal größer als header
 
 Kleinigkeiten:
 wenn man Buttons drückt, springen manchmal die Boxen in ihrer Größe
