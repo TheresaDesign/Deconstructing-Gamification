@@ -140,6 +140,26 @@ body{
   padding: 0;
   margin: 0;
 }
+
+.firstimg{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  overflow: hidden;
+  
+}
+
+.firstimg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: bottom;
+}
+
+.scrolled .firstimg {
+  transform: translateY(-100%);
+}
 main{
     display: flex;
     max-width: 1200px;
@@ -164,7 +184,7 @@ main{
   justify-content: center;
   width: 100%;
   margin-top: 5px;
-  z-index: 1000;
+  z-index: 100;
 }
 header{
     display: flex;
@@ -341,6 +361,146 @@ header{
   padding: 0 3vh;
 }
 
+.bubble-row{
+  gap:10%;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5% 0;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+  flex-basis: 50%;
+  max-width: 1500px;
+}
+
+.bubble1::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 20px solid white; /* Füllfarbe */
+}
+
+
+.bubble1::after {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 24px solid var(--yellow); /* Rahmenfarbe */
+  z-index: -1;
+}
+
+.bubble1{
+  box-shadow:0px 4px 0 var(--yellow);
+  border: 3px solid var(--yellow);
+}
+
+.bubble2::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid white; /* Füllfarbe */
+}
+
+
+.bubble2::after {
+  content: "";
+  position: absolute;
+  right: -26px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 24px solid var(--green_dark); /* Rahmenfarbe */
+  z-index: -1;
+}
+
+.bubble2{
+  box-shadow:0px 4px 0 var(--green_dark);
+  border: 3px solid var(--green_dark);
+}
+
+.bubble3::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 20px solid white; /* Füllfarbe */
+}
+
+
+.bubble3::after {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 24px solid var(--darkred); /* Rahmenfarbe */
+  z-index: -1;
+}
+
+.bubble3{
+  box-shadow:0px 4px 0 var(--darkred);
+  border: 3px solid var(--darkred);
+}
+
+.bubble4::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid white; /* Füllfarbe */
+}
+
+
+.bubble4::after {
+  content: "";
+  position: absolute;
+  right: -26px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 24px solid var(--green_light); /* Rahmenfarbe */
+  z-index: -1;
+}
+
+.bubble4{
+  box-shadow:0px 4px 0 var(--green_light);
+  border: 3px solid var(--green_light);
+}
 
 article{
   font-family: 'Nunito', sans-serif;
@@ -465,20 +625,20 @@ section{
   border-radius: 8px;
   background-color: var(--white); 
   color: var(--grey1);
-  border: 2px solid var(--grey1);
-  box-shadow: 0px 5px 0px 0px var(--grey1);
+  border: 2px solid var(--grey3);
+  box-shadow: 0px 5px 0px 0px var(--grey3);
   text-decoration: none; 
   display: inline-block; 
   cursor: pointer;
   height: 40px;
   align-items: center;
   display: flex;
-  margin: auto 10px;
+  margin: 40% 10px auto 10px;
 }
 
 .left:hover {
   background-color: var(--grey3); 
-  box-shadow: 0px 3px 0px 0px var(--grey1);
+  box-shadow: 0px 3px 0px 0px var(--grey2);
   
 }
 .left:active {
@@ -540,7 +700,8 @@ width:15px;
   margin-top:20px
 }
 .image-modal {
-  display: none; /* Modal wird standardmäßig versteckt */
+  display: none; 
+    pointer-events: auto; 
 }
 .modalGUI{
   display: none;
@@ -562,6 +723,17 @@ width:15px;
 }
 
 .close {
+  font-family: 'Nunito';
+  position: fixed;
+  top: 10vh;
+  left: 3vh;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 4000;
+}
+
+.closeelements {
   font-family: 'Nunito';
   position: fixed;
   top: 10vh;
@@ -692,11 +864,12 @@ width:15px;
   border-radius: 20px;
   box-shadow: 0px 6px 0px 0px var(--grey3);
   flex-shrink: 0;
+  height: fit-content;
 }
 
 .side-box-image{
-  display: flex;
-  flex-basis: 100%;
+  display: block;
+  flex-basis: 75%;
   overflow: auto;
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
@@ -748,6 +921,11 @@ width:15px;
   border-radius: 10px;
   width: 10%;
   height: 10px;
+  margin: auto 0;
+}
+
+.phone{
+  display: none ;
 }
 #elements{
   max-width: 1200px;
@@ -968,6 +1146,11 @@ footer{
 }
 
 /*bilder*/
+
+.avatar{
+
+}
+
 #duo-weights{
   width: 55%;
 }
@@ -980,13 +1163,8 @@ div #duo-party{
   width: 50%;
 }
 
-div #group-duo{
-  width: 50%; 
-  justify-content: center; 
-  display: flex;
-}
 #group-duo{
-  width: 55%;
+  width: 50%; 
 }
 
 #caseStudie{
@@ -1107,10 +1285,8 @@ div #group-duo{
     width: 100%;
   }
 
-  div #group-duo{
-    width: 10 0%; 
-    justify-content: center; 
-    display: flex;
+  #group-duo{
+    width: 100%; 
   }
   
   #caseStudie{
@@ -1133,6 +1309,20 @@ div #group-duo{
   display: block; /* Button anzeigen */
 }
 
+.left{
+  padding: 3px 8px 0px 8px;
+  height: 30px;
+  margin: auto 0px;
+}
+
+.phone{
+  display: block;
+}
+
+.desktop{
+  display: none;
+}
+
   /* Modal-Design */
   .image-modal {
     display: none;
@@ -1150,6 +1340,13 @@ div #group-duo{
   .modal-image {
     max-width: 90%;
     max-height: 90%;
+}
+
+.modal-video {
+  display: none; /* Standardmäßig versteckt */
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 10px;
 }
 
 .wheel-graphic{

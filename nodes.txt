@@ -27,7 +27,8 @@ Phonecall video
 
 - research Question anpassen
 
-
+Kleinigkeiten:
+wenn man Buttons drückt, springen manchmal die Boxen in ihrer Größe
 
 https://uclab.fh-potsdam.de/mapping/machtmietenarm/
 

@@ -1,39 +1,27 @@
-// Javascript für das scrollen des deconstructing teils
-window.onload = function() {
-  const box = document.getElementById('scrollBox');
-  centerScrollPosition(box); // Scrollposition beim Laden der Seite zentrieren
-};
+//script für das Onboarding
 
-let scale = 1; // Initialer Zoom-Wert
 
-function zoomIn() {
-  scale += 0.1; // Vergrößern
-  applyZoom();
-}
 
-function zoomOut() {
-  scale -= 0.1; // Verkleinern
-  applyZoom();
-}
 
-function resetZoom() {
-  scale = 1; // Zurück auf Standardzoom
-  applyZoom();
+//Ton bei Videos
+document.addEventListener("DOMContentLoaded", function () {
+  const videos = document.querySelectorAll("video");
 
-  const box = document.getElementById('scrollBox');
-  centerScrollPosition(box); // Scrollposition zurücksetzen
-}
+  videos.forEach(video => {
+    console.log("Video gefunden:", video); // Debugging: Prüft, ob beide Videos erkannt werden
 
-function applyZoom() {
-  const gui = document.getElementById('gui');
-  gui.style.transform = `scale(${scale})`;
-  gui.style.transformOrigin = 'center'; // Zoom von der Mitte aus
-}
+    video.addEventListener("click", function () {
+      console.log("Video geklickt:", video); // Debugging: Zeigt Klicks an
+      if (video.muted) {
+        video.muted = false;
+        video.play();
+      } else {
+        video.muted = true;
+      }
+    });
+  });
+});
 
-function centerScrollPosition(box) {
-  box.scrollLeft = (box.scrollWidth - box.clientWidth) / 2; // Horizontal mittig
-  box.scrollTop = (box.scrollHeight - box.clientHeight) / 2; // Vertikal mittig
-}
 
 //GUI
 document.addEventListener("DOMContentLoaded", function () {
@@ -63,43 +51,87 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //modal elemente
 document.addEventListener("DOMContentLoaded", function () {
-  const showImageBtns = document.querySelectorAll(".elementpic");
+  const showElementBtns = document.querySelectorAll(".elementpic");
   const modal = document.querySelector(".image-modal");
   const modalImage = document.querySelector(".modal-image");
+  const modalVideo = document.querySelector(".modal-video");
+  const modalVideoSource = modalVideo.querySelector("source");
   const closeModal = document.querySelector(".close");
 
-  // Modal öffnen
-  showImageBtns.forEach(button => {
+  showElementBtns.forEach(button => {
       button.addEventListener("click", function () {
-          const imageSrc = button.getAttribute("data-image");
-          modalImage.src = imageSrc;
+          const mediaSrc = button.getAttribute("data-image");
+
+          if (mediaSrc.endsWith(".mp4")) { 
+              // VIDEO ANZEIGEN
+              modalImage.style.display = "none";  // Bild verstecken
+              modalVideo.style.display = "block"; // Video anzeigen
+              modalVideoSource.src = mediaSrc;
+              modalVideo.load();  // Video neu laden
+              modalVideo.play();  // Autoplay starten
+          } else { 
+              // BILD ANZEIGEN
+              modalVideo.style.display = "none"; // Video verstecken
+              modalImage.style.display = "block"; // Bild anzeigen
+              modalImage.src = mediaSrc;
+          }
+
           modal.style.display = "flex";
       });
   });
 
   // Modal schließen per Button
   if (closeModal) {
-      closeModal.addEventListener("click", function (e) {
-          e.stopPropagation(); // Verhindert, dass das Modal durch einen Klick auf sich selbst geschlossen wird
-          modal.style.display = "none";
-          modalImage.src = "";
-      });
+    console.log("Close-Button gefunden!");
+    closeModal.addEventListener("click", function (e) {
+        console.log("Close-Button wurde geklickt!");
+        modal.style.display = "none";
+        modalImage.src = "";
+    });
+  } else {
+    console.log("Close-Button nicht gefunden!");
   }
 
-  // Modal schließen, wenn außerhalb des Bildes geklickt wird
+  // Modal schließen, wenn außerhalb des Inhalts geklickt wird
   modal.addEventListener("click", function (e) {
       if (e.target === modal) {
           modal.style.display = "none";
           modalImage.src = "";
+          modalVideo.pause();
+          modalVideo.currentTime = 0;
       }
   });
+});
 
-  // Test, ob der Close-Button gefunden wurde
-  console.log("Close-Button gefunden:", closeModal);
+document.addEventListener("DOMContentLoaded", function () {
+  const closeButtons = document.querySelectorAll(".close"); // Alle Close-Buttons holen
+  const modals = document.querySelectorAll(".image-modal"); // Alle Modals holen
+
+  closeButtons.forEach(closeButton => {
+      closeButton.addEventListener("click", function (e) {
+          console.log("Close-Button wurde geklickt!"); // Debugging-Check
+          e.stopPropagation(); // Verhindert, dass das Modal sich durch einen anderen Klick schließt
+
+          // Nächstes Eltern-Modal finden und schließen
+          const modal = closeButton.closest(".image-modal");
+          if (modal) {
+              modal.style.display = "none";
+          }
+      });
+  });
+
+  // Optional: Modal durch Klick außerhalb schließen
+  modals.forEach(modal => {
+      modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+              modal.style.display = "none";
+          }
+      });
+  });
 });
 
 
-//script diemnsions
+//script dimensions
 const texts = [
   {
     id: "performance",
@@ -153,12 +185,12 @@ function updateContent() {
 
   // Alle Dimensionen zurücksetzen
   document.querySelectorAll(".dimension").forEach(dim => {
-    dim.style.width = "10%"; // Standardgröße
+    dim.style.width = "15%"; // Standardgröße
     dim.style.transition = "width 0.3s ease";
   });
 
   // Aktuelle Dimension vergrößern
-  activeDimension.style.width = "25%";
+  activeDimension.style.width = "40%";
 }
 
 
@@ -174,3 +206,68 @@ document.querySelectorAll(".left").forEach((button, index) => {
 
 // Starte mit dem ersten Text
 updateContent();
+
+
+
+// Javascript für das scrollen des GUIs
+let scale = 1; // Startzoom-Wert (nach oben verschoben)
+
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    const box = document.getElementById("scrollBox");
+    if (box) {
+      centerScrollPosition(box);
+    } else {
+      console.error("scrollBox nicht gefunden!");
+    }
+  }, 100);
+});
+
+function centerScrollPosition(box) {
+  const gui = document.getElementById("gui-mobile");
+
+  if (!gui) {
+    console.error("gui-mobile nicht gefunden!");
+    return;
+  }
+
+  const scaledWidth = gui.scrollWidth * scale;
+  const scaledHeight = gui.scrollHeight * scale;
+
+  box.scrollLeft = (scaledWidth - box.clientWidth) / 2;
+  box.scrollTop = (scaledHeight - box.clientHeight) / 2;
+}
+
+function zoomIn() {
+  scale += 0.1;
+  applyZoom();
+}
+
+function zoomOut() {
+  scale = Math.max(0.5, scale - 0.1);
+  applyZoom();
+}
+
+function resetZoom() {
+  scale = 1;
+  applyZoom();
+
+  setTimeout(() => {
+    const box = document.getElementById("scrollBox");
+    if (box) {
+      centerScrollPosition(box);
+    }
+  }, 50);
+}
+
+function applyZoom() {
+  const gui = document.getElementById("gui-mobile");
+  gui.style.transform = `scale(${scale})`;
+  gui.style.transformOrigin = "center";
+
+  // Nach dem Zoomen erneut scrollen
+  setTimeout(() => {
+    const box = document.getElementById("scrollBox");
+    centerScrollPosition(box);
+  }, 50);
+}
