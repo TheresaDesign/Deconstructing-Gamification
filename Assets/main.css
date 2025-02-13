@@ -1027,6 +1027,8 @@ div #group-duo{
 .imageBig-box{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .imageBig{
   border-radius: 20px;
