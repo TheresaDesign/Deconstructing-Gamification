@@ -2,23 +2,10 @@ Problems:
 Webside:
   - spacing in the psychology part is wierd
 
-Essay:
-  - Wheel Text: Reihenfolge is wierd. Im Rad wird zum Beispiel storytelling genannt, obwohl das gar nicht existiert. Er später wird gesagt warum das überhaupt genannt wird
-  - Bereiche des Rades erklären
-
 General to dos:
 Fonts nicht mehr über link sondern lokal einbetten
-font bei psychology einbetten
-icon für tab
-beim RAd ist zweimal community challenges hintereinander- dafür sorgen, dass die Texte aufeinander aufbauen
+icon für tabsorgen, dass die Texte aufeinander aufbauen
   auf die Bilder eingehen
-farnooshs Quellen:
-  Loewen, S., Isbell, D. R., & Sporn, Z. (2019). The effectiveness of Duolingo as a language learning tool. Journal of Second Language Learning.
-  Wyner, G. (2014). Fluent Forever: How to Learn Any Language Fast and Never Forget It. Harmony Books.
-  Duolingo Research Team. How Duolingo Works: Gamification for Learning. Duolingo Blog.
-  InFUSION. Gamification : A Proposed Solution to Bridge Education and Game Design. Malaysian Online Journal of Educational Technology (2018). Gamification in Education.
-  ERIC - Mobile Learning and Gamification.
-  https://eera-ecer.de/ecer-programmes/conference/29/contribution/58888
 
 
 About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz alle Tools, Rahmenwerke oder Methoden, die in der Analyse verwendet werden (z. B. UI Ripping, Benutzerumfragen).
@@ -27,6 +14,7 @@ About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz al
 - research Question anpassen
 - bubbles am anfang manchmal größer als header
 -zoom in zoom out buttons
+- hinschreiben, dass man auf die Videos klicken kann
 
 Kleinigkeiten:
 wenn man Buttons drückt, springen manchmal die Boxen in ihrer Größe
