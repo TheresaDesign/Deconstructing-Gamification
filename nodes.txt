@@ -26,6 +26,7 @@ About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz al
 
 - research Question anpassen
 - bubbles am anfang manchmal größer als header
+-zoom in zoom out buttons
 
 Kleinigkeiten:
 wenn man Buttons drückt, springen manchmal die Boxen in ihrer Größe

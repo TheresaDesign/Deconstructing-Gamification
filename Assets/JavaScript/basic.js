@@ -1,5 +1,28 @@
 //script für das Onboarding
 
+//menü
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section"); // Deine Sektionen
+  const menuItems = document.querySelectorAll(".menu-dot");
+
+  function highlightMenu() {
+    let scrollPosition = window.scrollY;
+
+    sections.forEach((section, index) => {
+      const sectionTop = section.offsetTop - 50; // Kleiner Offset für bessere Erkennung
+      const sectionHeight = section.clientHeight;
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        menuItems.forEach((item) => item.classList.remove("active")); // Erst alles zurücksetzen
+        menuItems[index].classList.add("active"); // Aktiven Punkt markieren
+      }
+    });
+  }
+
+  window.addEventListener("scroll", highlightMenu);
+  highlightMenu(); // Beim Laden direkt prüfen
+});
+
 
 
 
@@ -270,4 +293,10 @@ function applyZoom() {
     const box = document.getElementById("scrollBox");
     centerScrollPosition(box);
   }, 50);
+}
+
+
+//dropdown boxen
+function toggleDropdown(element) {
+  element.classList.toggle("active");
 }

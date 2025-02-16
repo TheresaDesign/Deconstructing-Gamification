@@ -262,6 +262,10 @@ header{
   fill: var(--white);
 }
 
+.menu-dot.active .star {
+  fill: var(--white);
+}
+
 .menu-label {
   position: absolute;
   right: 130%; /* Direkt rechts neben dem Menüpunkt */
@@ -285,19 +289,6 @@ header{
 .menu-dot:hover .menu-label {
   opacity: 1;
   transform: translateY(-50%) scale(1.05);
-}
-
-.header-content{
-  display: flex;
-  flex-direction: row;
-  max-width: 1200px;
-  margin: auto;
-  width: 100%;
-  background-color: var(--grey4);
-  padding: 0 20px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 0px 0px #AFAFAF;
-  justify-content: space-between;
 }
 
 .side-menu{
@@ -324,7 +315,66 @@ header{
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   font-size: 18px;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
+
+.menu-dot:hover, .menu-dot.active {
+  color: var(--highlight-color); /* Passe die Farbe an */
+  transform: scale(1.2);
+}
+
+.menu-item {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-introduction.active {
+  background-color: var(--green_light);
+  box-shadow: 0px 4px 0px 0px var(--green_dark);
+}
+
+.menu-gamification.active {
+  background-color: var(--red);
+  box-shadow: 0px 4px 0px 0px var(--darkred);
+}
+
+.menu-deconstruct.active {
+  background-color: var(--yellow);
+  box-shadow: 0px 4px 0px 0px var(--orange);
+}
+
+.menu-elements.active {
+  background-color: var(--purple);
+  box-shadow: 0px 4px 0px 0px var(--darkpurple);
+}
+
+.menu-psycho.active {
+  background-color: var(--orange);
+  box-shadow: 0px 4px 0px 0px var(--darkorange);
+}
+
+.menu-effectiveness.active {
+  background-color: var(--darkblue);
+  box-shadow: 0px 4px 0px 0px var(--darkerblue);
+}
+
+.menu-conclusion.active {
+  background-color: var(--green_dark);
+  box-shadow: 0px 4px 0px 0px var(--green_light);
+}
+
+.header-content{
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  background-color: var(--grey4);
+  padding: 0 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px 0px #AFAFAF;
+  justify-content: space-between;
+}
+
 
 .title{
   display: flex;
@@ -357,7 +407,7 @@ header{
 #kapitel-icon{
   width: 30px;
 }
-#intro-box{
+.intro-box{
   background-color: var(--grey4);
   padding: 100px 0;
 }
@@ -385,7 +435,7 @@ header{
   border-radius: 20px;
   padding: 30px;
   box-sizing: border-box;
-  flex-basis: 50%;
+  flex-basis: 75%;
   max-width: 1500px;
 }
 
@@ -511,6 +561,54 @@ header{
 .bubble4{
   box-shadow:0px 4px 0 var(--green_light);
   border: 3px solid var(--green_light);
+}
+
+.flip-container {
+  flex-basis: 48%;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flipped .flip-box {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.front {
+  background: var(--green_light);
+  box-shadow: 0px 4px 0px 0px var(--green_dark);
+}
+
+.back {
+  background: white;
+  transform: rotateY(180deg);
+  border: 2px solid var(--green_dark);
+  box-shadow: 0px 4px 0px 0px var(--green_dark);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 article{
@@ -1070,6 +1168,64 @@ figure p {
   scale: 0.2;
 }
 
+.dropdowns{
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-box {
+  background-color: var(--white);
+  border: 2px solid var(--darkblue);
+  box-shadow: 0px 2px 0px 0px var(--darkblue);
+  border-radius: 20px;
+  padding: 20px;
+  width: 60%;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.dropdown-box:hover {
+  background-color: var(--blue);
+  border: 2px solid var(--darkblue);
+  box-shadow: 0px 2px 0px 0px var(--darkblue);
+  color: var(--white);
+  width: 70%;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease-in-out;
+  width: 20px;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.dropdown-box.active:hover{
+  width: 70%;
+}
+.dropdown-box.active .dropdown-content {
+  max-height: 500px; /* Hoch genug für den Text */
+  opacity: 1;
+}
+
+.dropdown-box.active:hover .dropdown-content p {
+  color: white !important;
+}
+
+.dropdown-box.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
 /*
 #scrolly {
   position: relative;
@@ -1259,7 +1415,7 @@ div #duo-party{
     padding: 1.3vh 0;
    }
 
-  #intro-box{
+  .intro-box{
     padding: 30px 0;
   }
 
