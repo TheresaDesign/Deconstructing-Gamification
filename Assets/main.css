@@ -1189,7 +1189,7 @@ figure p {
   border: 2px solid var(--darkblue);
   box-shadow: 0px 2px 0px 0px var(--darkblue);
   color: var(--white);
-  width: 70%;
+  width: 65%;
 }
 
 .dropdown-header {
@@ -1211,7 +1211,7 @@ figure p {
 }
 
 .dropdown-box.active:hover{
-  width: 70%;
+  width: 65%;
 }
 .dropdown-box.active .dropdown-content {
   max-height: 500px; /* Hoch genug für den Text */

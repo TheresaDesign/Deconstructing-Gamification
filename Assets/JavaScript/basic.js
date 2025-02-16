@@ -1,27 +1,47 @@
 //script für das Onboarding
 
 //menü
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section"); // Deine Sektionen
-  const menuItems = document.querySelectorAll(".menu-dot");
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section"); // Alle Sektionen auf der Seite
+  const menuLinks = document.querySelectorAll(".menu-dot"); // Alle Menüpunkte
 
-  function highlightMenu() {
-    let scrollPosition = window.scrollY;
+  let visitedSections = new Set(); // Set für besuchte Abschnitte
 
-    sections.forEach((section, index) => {
-      const sectionTop = section.offsetTop - 50; // Kleiner Offset für bessere Erkennung
-      const sectionHeight = section.clientHeight;
+  function updateMenu() {
+      let currentSection = null;
 
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        menuItems.forEach((item) => item.classList.remove("active")); // Erst alles zurücksetzen
-        menuItems[index].classList.add("active"); // Aktiven Punkt markieren
-      }
-    });
+      sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
+              currentSection = section;
+          }
+      });
+
+      menuLinks.forEach((link) => {
+          const targetId = link.getAttribute("href").substring(1);
+          if (currentSection && currentSection.id === targetId) {
+              link.classList.add("active");
+              visitedSections.add(targetId);
+          } else {
+              link.classList.remove("active");
+          }
+
+          // Entfernt die Farbigkeit, wenn man wieder hochscrollt
+          if (!visitedSections.has(targetId)) {
+              link.classList.remove("visited");
+          }
+      });
+
+      // Nachträglich besuchte Sektionen farbig machen
+      visitedSections.forEach((id) => {
+          document.querySelector(`.menu-dot[href="#${id}"]`).classList.add("visited");
+      });
   }
 
-  window.addEventListener("scroll", highlightMenu);
-  highlightMenu(); // Beim Laden direkt prüfen
+  window.addEventListener("scroll", updateMenu);
+  updateMenu(); // Initialer Check
 });
+
 
 
 
