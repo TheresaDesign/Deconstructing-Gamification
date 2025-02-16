@@ -266,6 +266,10 @@ header{
   fill: var(--white);
 }
 
+.menu-dot.visited .star {
+  fill: var(--white);
+}
+
 .menu-label {
   position: absolute;
   right: 130%; /* Direkt rechts neben dem Menüpunkt */
@@ -318,6 +322,7 @@ header{
   transition: transform 0.2s ease, color 0.3s ease;
 }
 
+
 .menu-dot:hover, .menu-dot.active {
   color: var(--highlight-color); /* Passe die Farbe an */
   transform: scale(1.2);
@@ -327,37 +332,37 @@ header{
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.menu-introduction.active {
+.menu-introduction.active, .menu-introduction.visited {
   background-color: var(--green_light);
   box-shadow: 0px 4px 0px 0px var(--green_dark);
 }
 
-.menu-gamification.active {
+.menu-gamification.active, .menu-gamification.visited {
   background-color: var(--red);
   box-shadow: 0px 4px 0px 0px var(--darkred);
 }
 
-.menu-deconstruct.active {
+.menu-deconstruct.active, .menu-deconstruct.visited {
   background-color: var(--yellow);
   box-shadow: 0px 4px 0px 0px var(--orange);
 }
 
-.menu-elements.active {
+.menu-elements.active, .menu-elements.visited {
   background-color: var(--purple);
   box-shadow: 0px 4px 0px 0px var(--darkpurple);
 }
 
-.menu-psycho.active {
+.menu-psycho.active, .menu-psycho.visited {
   background-color: var(--orange);
   box-shadow: 0px 4px 0px 0px var(--darkorange);
 }
 
-.menu-effectiveness.active {
+.menu-effectiveness.active, .menu-effectiveness.visited {
   background-color: var(--darkblue);
   box-shadow: 0px 4px 0px 0px var(--darkerblue);
 }
 
-.menu-conclusion.active {
+.menu-conclusion.active, .menu-conclusion.visited {
   background-color: var(--green_dark);
   box-shadow: 0px 4px 0px 0px var(--green_light);
 }

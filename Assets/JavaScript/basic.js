@@ -2,47 +2,53 @@
 
 //menü
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll("section"); // Alle Sektionen auf der Seite
-  const menuLinks = document.querySelectorAll(".menu-dot"); // Alle Menüpunkte
+  const sections = document.querySelectorAll("section");
+  const menuLinks = document.querySelectorAll(".menu-dot");
 
-  let visitedSections = new Set(); // Set für besuchte Abschnitte
+  let visitedSections = new Set(); // Speichert besuchte Abschnitte
 
   function updateMenu() {
+      let viewportCenter = window.innerHeight * 0.5; // Mittelpunkt des Bildschirms
       let currentSection = null;
 
       sections.forEach((section) => {
           const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
-              currentSection = section;
+          const sectionId = section.id;
+
+          // Aktuelle Sektion bestimmen (die, die am nächsten zur Mitte ist)
+          if (rect.top < viewportCenter && rect.bottom > viewportCenter) {
+              currentSection = sectionId;
+          }
+
+          // Beim Runterscrollen als besucht markieren, beim Hochscrollen wieder entfernen
+          if (rect.top < viewportCenter) {
+              visitedSections.add(sectionId);
+          } else {
+              visitedSections.delete(sectionId);
           }
       });
 
+      // Aktualisiere die Menü-Punkte
       menuLinks.forEach((link) => {
           const targetId = link.getAttribute("href").substring(1);
-          if (currentSection && currentSection.id === targetId) {
+
+          if (visitedSections.has(targetId)) {
+              link.classList.add("visited");
+          } else {
+              link.classList.remove("visited");
+          }
+
+          if (targetId === currentSection) {
               link.classList.add("active");
-              visitedSections.add(targetId);
           } else {
               link.classList.remove("active");
           }
-
-          // Entfernt die Farbigkeit, wenn man wieder hochscrollt
-          if (!visitedSections.has(targetId)) {
-              link.classList.remove("visited");
-          }
-      });
-
-      // Nachträglich besuchte Sektionen farbig machen
-      visitedSections.forEach((id) => {
-          document.querySelector(`.menu-dot[href="#${id}"]`).classList.add("visited");
       });
   }
 
   window.addEventListener("scroll", updateMenu);
-  updateMenu(); // Initialer Check
+  updateMenu(); // Direkt initialisieren
 });
-
-
 
 
 
