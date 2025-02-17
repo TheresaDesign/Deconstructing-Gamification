@@ -326,3 +326,36 @@ function applyZoom() {
 function toggleDropdown(element) {
   element.classList.toggle("active");
 }
+
+//userjourney
+document.addEventListener("DOMContentLoaded", function () {
+  let currentIndex = 0;
+  const contents = document.querySelectorAll(".userjourney-content");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+
+  function updateCarousel() {
+      contents.forEach((content, index) => {
+          content.classList.toggle("active", index === currentIndex);
+      });
+
+      prevButton.disabled = currentIndex === 0;
+      nextButton.disabled = currentIndex === contents.length - 1;
+  }
+
+  prevButton.addEventListener("click", () => {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+      }
+  });
+
+  nextButton.addEventListener("click", () => {
+      if (currentIndex < contents.length - 1) {
+          currentIndex++;
+          updateCarousel();
+      }
+  });
+
+  updateCarousel();
+});

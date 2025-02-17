@@ -1173,6 +1173,66 @@ figure p {
   scale: 0.2;
 }
 
+/*Userjourney*/
+.userjourney-container{
+  border-radius: 20px;
+  box-shadow: 0px 6px 0px 0px var(--grey3);
+  border: 2px solid var(--grey3);
+  padding: 20px;
+}
+.userjourney-content{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+
+}
+
+.userjourney-content {
+  display: none;
+}
+
+.userjourney-content.active {
+  display: block;
+}
+
+.userjourney-headline{
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 0px 0px var(--grey3);
+  border: 2px solid var(--grey3);
+  width: fit-content;
+}
+.userjourney-story{
+  display: flex;
+  flex-direction: row;
+  gap:5%;
+}
+
+.uj-bubble{
+  height: fit-content;
+  margin:auto 0;
+}
+
+.userjourney-img{
+  flex-basis: 30%;
+}
+.controls {
+  margin-top: 10px;
+  display: flex;
+  float: right;
+  justify-content: space-between
+}
+
+.controls button {
+  margin: 5px;
+}
+
+.controls button:disabled {
+  display: none;
+}
+
+
 .dropdowns{
   display: flex;
   flex-direction: column;
