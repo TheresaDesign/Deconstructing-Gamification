@@ -1185,7 +1185,8 @@ figure p {
   width: 100%;
   flex-direction: column;
   padding: 20px;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .userjourney-content {
@@ -1221,7 +1222,7 @@ figure p {
   margin-top: 10px;
   display: flex;
   float: right;
-  justify-content: space-between
+  justify-content: end;
 }
 
 .controls button {
