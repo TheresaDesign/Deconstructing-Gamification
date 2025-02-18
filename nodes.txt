@@ -12,9 +12,9 @@ About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz al
 
 
 - research Question anpassen
-- bubbles am anfang manchmal größer als header
--zoom in zoom out buttons
+- zoom in zoom out buttons
 - hinschreiben, dass man auf die Videos klicken kann
+- einleitungstext dropdown
 
 Kleinigkeiten:
 wenn man Buttons drückt, springen manchmal die Boxen in ihrer Größe

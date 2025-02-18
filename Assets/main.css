@@ -1185,6 +1185,7 @@ figure p {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  margin: 5% 0;
 }
 .userjourney-content{
   box-sizing: border-box;
