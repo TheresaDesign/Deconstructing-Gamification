@@ -14,7 +14,7 @@ About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz al
 - research Question anpassen
 - zoom in zoom out buttons
 - hinschreiben, dass man auf die Videos klicken kann
-- einleitungstext dropdown
+- einleitungstext für  dropdown teil
 
 Kleinigkeiten:
 wenn man Buttons drückt, springen manchmal die Boxen in ihrer Größe

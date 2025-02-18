@@ -572,6 +572,37 @@ header{
   border: 3px solid var(--green_light);
 }
 
+.bubble5::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 20px solid white; /* Füllfarbe */
+}
+
+
+.bubble5::after {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 24px solid var(--grey3); /* Rahmenfarbe */
+  z-index: -1;
+}
+
+.bubble5{
+  box-shadow:0px 4px 0 var(--grey3);
+  border: 3px solid var(--grey3);
+}
+
 .flip-container {
   flex-basis: 48%;
   height: 200px;
@@ -1205,8 +1236,8 @@ figure p {
 .userjourney-headline{
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0px 6px 0px 0px var(--grey3);
-  border: 2px solid var(--grey3);
+  box-shadow: 0px 6px 0px 0px var(--darkblue);
+  border: 2px solid var(--darkblue);
   width: fit-content;
 }
 .userjourney-story{
@@ -1215,15 +1246,19 @@ figure p {
   gap:4%;
 }
 .userjourney-avatar{
-  width: 30%;
+  width: 20%;
+flex-shrink: 0;
 }
 .uj-bubble{
   height: fit-content;
   margin:auto 0;
+  flex-basis: 50%;
+flex-shrink: 0;
 }
 
 .userjourney-img{
-  flex-basis: 30%;
+  width: 30%;
+  height: fit-content;
 }
 .controls {
   margin-top: 10px;
@@ -1233,11 +1268,21 @@ figure p {
 }
 
 .controls button {
-  margin: 5px;
+  margin: 0 auto;
+  border: 2px solid var(--darkblue);
+  box-shadow: 0px 5px 0px 0px var(--darkblue);
+}
+
+.controls button:hover {
+  border: 2px solid var(--darkerblue);
+  box-shadow: 0px 3px 0px 0px var(--darkerblue);
+  background-color: var(--grey4);
 }
 
 .controls button:disabled {
-  display: none;
+  border: 2px solid var(--darkblue);
+  box-shadow: 0px 5px 0px 0px var(--darkblue);
+  opacity: 0.2;
 }
 
 
