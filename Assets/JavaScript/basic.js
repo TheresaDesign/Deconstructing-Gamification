@@ -396,3 +396,65 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initiales Update ausführen
   updateCarousel();
 });
+
+//retention
+document.addEventListener("DOMContentLoaded", function () {
+  const knoepfe = document.querySelectorAll(".retention-knopf");
+
+  knoepfe.forEach((knopf) => {
+    const button = knopf.querySelector("h4");
+    const content = knopf.querySelector(".retention-content");
+    const images = knopf.querySelectorAll(".retention-img img");
+    const buttons = knopf.querySelectorAll(".retention-content button");
+    const prevButton = buttons[0];
+    const nextButton = buttons[1];
+    let currentIndex = 0;
+
+    // Öffnen/Schließen der Content-Box
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();
+      content.style.display = content.style.display === "flex" ? "none" : "flex";
+    });
+
+    // Schließen bei Klick außerhalb
+    document.addEventListener("click", function (event) {
+      if (!knopf.contains(event.target) && content.style.display === "flex") {
+        content.style.display = "none";
+      }
+    });
+
+    // Verhindert das Schließen beim Klicken innerhalb der Box
+    content.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+
+    // Funktion zum Anzeigen des aktuellen Bildes
+    function updateImage() {
+      images.forEach((img, index) => {
+        img.style.display = index === currentIndex ? "block" : "none";
+      });
+
+      prevButton.disabled = currentIndex === 0;
+      nextButton.disabled = currentIndex === images.length - 1;
+    }
+
+    // Navigation
+    prevButton.addEventListener("click", function (event) {
+      event.stopPropagation();
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateImage();
+      }
+    });
+
+    nextButton.addEventListener("click", function (event) {
+      event.stopPropagation();
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        updateImage();
+      }
+    });
+
+    updateImage(); // Initial setzen
+  });
+});

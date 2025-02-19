@@ -775,10 +775,11 @@ section{
   box-shadow: 0px 2px 0px 0px var(--grey1); 
   color: var(--grey1);
   border: 1px solid var(--grey1);
-  transform: translateY(3px); /* Visueller "Klick-Effekt" */
+  transform: translateY(3px); 
+  z-index: 2;
 }
 
-.left {
+.left,.right{
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 12px;
@@ -798,12 +799,12 @@ section{
   margin: 40% 10px auto 10px;
 }
 
-.left:hover {
+.left:hover ,.right:hover{
   background-color: var(--grey3); 
   box-shadow: 0px 3px 0px 0px var(--grey2);
   
 }
-.left:active {
+.left:active ,.right:active{
   background-color: var(--white); 
   box-shadow: 0px 2px 0px 0px var(--grey1); 
   color: var(--grey1);
@@ -1219,6 +1220,64 @@ figure p {
 
 #scrolly-img{
   scale: 0.2;
+}
+
+/*retention*/
+.retention-all{
+  display: flex;
+  flex-direction: column;
+}
+
+.retention-buttons{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.retention-knopf{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 0px 0px var(--darkpurple);
+  border: 2px solid var(--darkpurple);
+  cursor: pointer;
+  margin: 0 10px 10px 0;
+}
+
+.retention-knopf h4{
+  color: var(--darkpurple);
+}
+
+.retention-content{
+  display: none;
+  flex-direction: row;
+  gap:20px;
+}
+
+.retention-text{
+  flex-basis: 66%;
+}
+.retention-img{
+  width: 20%;
+  margin: auto;
+}
+.retention-img img {
+  display: none;
+  width: 100%;
+}
+
+.retention-img img.active {
+  display: block;
+}
+
+.retention-content button{
+  margin: auto;
+
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
 }
 
 /*Userjourney*/
