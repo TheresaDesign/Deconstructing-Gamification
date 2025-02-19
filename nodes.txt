@@ -11,7 +11,7 @@ icon für tabsorgen, dass die Texte aufeinander aufbauen
 About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz alle Tools, Rahmenwerke oder Methoden, die in der Analyse verwendet werden (z. B. UI Ripping, Benutzerumfragen).
 
 
-- research Question anpassen
+- einheitliches spacing
 - zoom in zoom out buttons
 - hinschreiben, dass man auf die Videos klicken kann
 - einleitungstext für  dropdown teil
