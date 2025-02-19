@@ -6413,6 +6413,10 @@
           <video  class="element-image"  autoplay muted loop id="video" style="border-radius: 10px; cursor: pointer;">
             <source src="Assets/Deconstructing/elements-pics/time-pressure.mp4" type="video/mp4">
           </video> 
+          <div class="information" >
+            <img class="information-img" src="Assets/componants/information.svg" alt="">
+            click on the video to play the sound
+          </div>
         </div>
         <div class="wheel-text" style="box-shadow: 0px 6px 0px 0px #FF9500; border: 3px solid #FF9500">
           <h4 style="color: #E92B2B;">ECOLOGICAL</h4>
@@ -6544,6 +6548,10 @@
           <video  class="element-image"  autoplay muted loop id="video" style="border-radius: 10px; cursor: pointer;">
             <source src="Assets/Deconstructing/elements-pics/novelty.mp4" type="video/mp4">
           </video>  
+          <div class="information" >
+            <img class="information-img" src="Assets/componants/information.svg" alt="">
+            click on the video to play the sound
+          </div>
         </div>
         <div class="wheel-text" style="box-shadow: 0px 6px 0px 0px #A4ED6E; border: 3px solid #A4ED6E">
           <h4 style="color: var(--green_dark);">PERSONAL</h4>
@@ -6802,7 +6810,7 @@
         </div>
         <div class="wheel-text" style="box-shadow: 0px 6px 0px 0px #FEA9DE; border: 3px solid #FEA9DE">
           <h4 style="color: var(--purple);">PERFORMANCE</h4>
-          <h3>stats</h3>
+          <h3 id="stats">stats</h3>
           <div id="body-text">
             <h5>Progress Bars and Milestones</h5>
             <p>Each lesson and skill in Duolingo has a progress bar that shows how much of the lesson has been completed, and users can unlock new skills or levels after reaching a certain amount of goals.</p> <p>Progress bars provide a visual representation of a user's advancement, which is motivating and rewarding. Reaching goals reinforces the feeling of accomplishment, making the user feel that their learning is moving forward.</p>
@@ -7092,7 +7100,7 @@
       </div>
 
       <article>
-        <h3>User Journey</h3>
+        <h3>a duolingo User Journey</h3>
         <p>In the preceding chapters, an examination was conducted on the nature of gamification, the elements employed, and the psychological mechanisms through which it operates. Duolingo's gamification strategy has been found to be highly sophisticated and is subject to ongoing refinement. Nevertheless, in order to address the second research question, which pertains to the potential absence of elements or functions, a more detailed analysis of the <span class="dossier">user journey<span class="dossier-text">a person's experience during one session of using a website/ an app/ software. In this case: Duolingo</span></span> is necessary. This method will be utilised to identify and locate areas of concern.</p>
       </article>
       <div class="userjourney-container">
@@ -7230,6 +7238,131 @@
         </div>
       </div>
 
+      <article>
+        <p>Die User Journey zeigt, dass trotz wirklich umfangreicher Gamification, Probleme und Pain Points aufkommen. Die User Journey hat gezeigt, dass zum Beispiel Unsicherheiten beim Machen von Fehlern entstehen, besonders in der Grammatik. Für den Nutzer ist es nicht nachvollziehbar, warum seine Antwort genau falsch ist, schließlich bekommt er nur die richtige Lösung. Grammatikregeln oder auch allternative Lösungen sind nicht einsehbar.</p>
+        <p>Die User Journey zeigt, genauso wie aber auch schon unsere Analyse der psychology, wie stark der Fokus auf der extrinsischen Motivation liegt. Auch das führt langfristig zu Problemen, da Nutzer dazu neigen Abkürzungen wie das erneute spielen von Lektion zu nehmen um einfacher an XP und Gems zu kommen.</p>
+        <p>Diese beiden Probleme haben wir uns etwas genauer angeschaut und geschaut, wie man Funktionen hinzufügen könnte, oder auch umformulieren könnte, um ein besseren Lerneffekt zu erzielen.</p>
+      </article>
+
+      <h3>Reimagining the Duolingo Experience</h3>
+      <div class="row" style="gap: 20px;">
+        <div class="verbesserung-gesammt">
+          <h4>Insufficient feedback</h4>
+          <p>Die Gefahr einer generischen oder verkürzten Form des Feedbacks besteht bei der Anwendung von Gamification. Dies lässt sich auf verschiedene Faktoren zurückführen. Zunächst liegt der Fokus in der Regel auf der Vergabe von Belohnungen und nicht auf dem Lernprozess an sich. In der Folge ist dem Nutzer in der Regel undifferenziertes Feedback, wie beispielsweise "gut gemacht" oder "weiter so", ausreichend. Ein weiterer Grund ist, dass die App nicht in der Lage ist, kontextbezogenes Feedback zu generieren und auch nicht bemerkt, ob der Nutzer dieses wirklich verstanden hat.</p>
+          <p>Um dieses Problem zu adressieren, könnte der Nutzer dazu angehalten werden, eigenständig Informationen zu suchen, um etwaige Unklarheiten zu beseitigen. Wie dies aussehen könnte, wird im Folgenden dargestellt.</p>
+        </div>
+
+        <div class="verbesserung">
+          <button class="left" id="vor" disabled>
+            <svg class="arrow-right" viewBox="0 0 91 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.7633 85.5266L9.94974 51.713C7.21607 48.9794 7.21607 44.5472 9.94974 41.8135L43.7633 8" stroke="var(--darkblue)" stroke-width="15" stroke-linecap="round"/>
+              <path d="M11.2142 46.7633L82.6274 47.0824" stroke="var(--darkblue)" stroke-width="15" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <div class="verbesserung-content">
+            <div class="information" style="width: 70%; margin: 0 auto;">
+              <img class="information-img" src="Assets/componants/information.svg" alt="">
+              The green dot indicates where the user will click next. Screens highlighted in green contain functions that we have added
+            </div>
+            <div class="verbesserung-img">
+              <img src="Assets/verbesserungen/verbesserung1/2Original.png" alt="">
+            </div>
+            <div class="verbesserung-text">
+              <p>The player starts a course and completes the task.</p>
+            </div>
+            
+          </div>
+
+          <div class="verbesserung-content">
+            <div class="verbesserung-img">
+              <img src="Assets/verbesserungen/verbesserung1/3Original.png" alt="">
+            </div>
+            <div class="verbesserung-text">
+              <p>The task is wrong. He gets the correct solution, but not the opportunity to save the task for later or to see why it is wrong.</p>
+            </div>
+          </div>
+
+          <div class="verbesserung-content">
+            <div class="verbesserung-img ">
+              <img src="Assets/verbesserungen/verbesserung1/4Original-Verbesserung1.png" alt="">
+            </div>
+            <div class="verbesserung-text">
+              <p>In our improved version, the player now has the option of obtaining more information about the set.</p>
+            </div>
+          </div>
+
+          <div class="verbesserung-content">
+            <div class="verbesserung-img">
+              <img src="Assets/verbesserungen/verbesserung1/5Original-Verbesserung2.png" alt="">
+            </div>
+            <div class="verbesserung-text">
+              <p>He sees the sentence in which the word was the error and can click on the word for which he wants to find out more. In this case, he chooses the word in which he has the error.</p>
+            </div>
+          </div>
+
+          <div class="verbesserung-content">
+            <div class="verbesserung-img">
+              <img src="Assets/verbesserungen/verbesserung1/6Original-Verbesserung3.png" alt="">
+            </div>
+            <div class="verbesserung-text">
+              <p>His mistake was that he chose the right word, but the wrong conjunction. </p>
+            </div>
+          </div>
+
+          <div class="verbesserung-content">
+            <div class="verbesserung-img">
+              <img src="Assets/verbesserungen/verbesserung1/8Original-Verbesserung3.png" alt="">
+            </div>
+            <div class="verbesserung-text">
+              <p>The player would like to save this error for later. He now also has the option to do this.</p>
+            </div>
+          </div>
+
+          <div class="verbesserung-content">
+            <div class="verbesserung-img">
+              <img src="Assets/verbesserungen/verbesserung1/9Original-Verbesserung1.png" alt="">
+            </div>
+            <div class="verbesserung-text">
+              <p>The player can now continue the course as normal</p>
+            </div>
+          </div>
+
+          <div class="verbesserung-content">
+            <div class="verbesserung-img">
+              <img src="Assets/verbesserungen/verbesserung1/11Original-Verbesserung1.png" alt="">
+            </div>
+            <div class="verbesserung-text">
+              <p>The course is finished, but the statistics you get at the end are not very helpful</p>
+            </div>
+          </div>
+
+          <div class="verbesserung-content">
+            <div class="verbesserung-img">
+              <img src="Assets/verbesserungen/verbesserung1/12Original-Verbesserung1.png" alt="">
+            </div>
+            <div class="verbesserung-text">
+              <p>To increase the learning effect, it would be useful to point out errors again and work with <a id="source" href="#stats">statistics</a></p>
+            </div>
+          </div>
+
+          <button class="left" id="nach">
+            <svg class="arrow-right" viewBox="0 0 91 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M46.8137 85.577L80.6272 51.7635C83.3609 49.0298 83.3609 44.5976 80.6272 41.864L46.8137 8.05044" stroke="var(--darkblue)" stroke-width="15" stroke-linecap="round"/>
+              <path d="M79.3628 46.8137L7.94952 47.1328" stroke="var(--darkblue)" stroke-width="15" stroke-linecap="round"/>
+              </svg>
+          </button>
+        </div>
+
+      </div>
+
+      
+      <article>
+        <h3>Questioning the effectiveness</h3>
+        <p>
+          In the last few chapters, we have analysed Duolingo on various levels. We have found that by utilising psychological principles such as operant conditioning, the dopamine reward system and flow theory, the app transforms the traditionally structured learning process into an engaging and interactive experience. However, we also found that there are negative effects and that there are also areas that can be optimised. While its accessibility and game-like mechanics contribute to its popularity, questions remain about its actual effectiveness in promoting deep language learning. We will now explore the strengths and limitations of the Duolingo approach, including its pedagogical impact, the balance between fun and learning, accessibility and ethical concerns around monetisation. Through a critical lens, we examine whether Duolingo is merely an entertaining language game or a truly effective learning tool.
+        </p>
+      </article>
       <div class="dropdowns">
         <div class="dropdown-box" onclick="toggleDropdown(this)">
           <div class="dropdown-header">
