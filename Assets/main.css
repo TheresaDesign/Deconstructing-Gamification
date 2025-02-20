@@ -100,7 +100,6 @@ h2{
 h3{
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  text-transform: lowercase;
   font-size: 27px;
   margin: 0;
 }
@@ -152,6 +151,7 @@ body{
   font-size: 15px;
   display: flex;
   gap: 15px;
+  max-width: 400px;
 }
 
 .information-img{
@@ -172,6 +172,15 @@ body{
   height: 100%;
   object-fit: cover; 
   object-position: bottom;
+}
+
+.firstimg-mobile img{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1001;
+  overflow: hidden;
+  display: none;
 }
 
 .scrolled .firstimg {
@@ -423,7 +432,7 @@ header{
   flex-basis: 33%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin: 10% 0 5% 0;
 }
 
 #kapitel-icon{
@@ -671,6 +680,7 @@ article{
   color: var(--of_Black);
   width: 50%;
   position: relative;
+  
 }
 
 .text-center{
@@ -728,6 +738,7 @@ section{
   position: sticky; 
   top:90%;
   z-index: 4;
+  margin: 5% 0;
 }
 
 .button-skip:hover {
@@ -984,8 +995,7 @@ width:15px;
 
 .dossier .dossier-text {
   visibility: hidden;
-  max-width: 300px;
-  width: fit-content;
+  width: min(300px, fit-content);
   min-width: 120px;
   font-size: 15px;
   background-color: var(--white);
@@ -1034,10 +1044,6 @@ width:15px;
   display: block;
   flex-basis: 75%;
   overflow: auto;
-  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
 }
 
 .scroll-image{
@@ -1226,6 +1232,7 @@ figure p {
 .retention-all{
   display: flex;
   flex-direction: column;
+  margin: 5% 0;
 }
 
 .retention-buttons{
@@ -1242,6 +1249,14 @@ figure p {
   border: 2px solid var(--darkpurple);
   cursor: pointer;
   margin: 0 10px 10px 0;
+}
+
+.retention-knopf:hover{
+  box-shadow: 0px 4px 0px 0px var(--darkpurple);
+  border: 2px solid var(--darkpurple);
+  cursor: pointer;
+  margin: 0 10px 10px 0;
+  background-color: var(--grey4);
 }
 
 .retention-knopf h4{
@@ -1358,6 +1373,10 @@ flex-shrink: 0;
 }
 
 /*Verbesserungen*/
+.verbesserung-row{
+  gap: 20px; 
+  margin: 5% 0;
+}
 .verbesserung-gesammt{
   margin: 20% 0 auto 0;
 }
@@ -1430,8 +1449,9 @@ flex-shrink: 0;
   padding: 20px;
   width: 60%;
   cursor: pointer;
-  margin: 20px 0;
+  margin: 15px 0;
   transition: width 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
 .dropdown-box:hover {
@@ -1600,7 +1620,7 @@ div #duo-party{
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 5%;
-  padding: 0 3vh;
+  padding: 5%;
   align-items: center;
 }
 
@@ -1636,6 +1656,18 @@ div #duo-party{
 }
 
 @media screen and (max-width: 500px){
+
+  .firstimg{
+    display: none;
+  }
+  
+  .firstimg-mobile img{
+    display: block;
+    object-fit: cover;
+object-position: top;
+border-radius: 0 0 40px 40px;
+  }
+
   h2{
     font-size: 30px;
   }
@@ -1680,9 +1712,48 @@ div #duo-party{
   }
 
   .button-skip{
-    top: 68vh;
+    top: 92vh;
   }
 
+  .findings_gui{
+    margin-top: 5vh;
+  }
+
+  .userjourney-container{
+    height: 100vh;
+  }
+
+  .userjourney-avatar{
+    display: none;
+  }
+
+  .userjourney-story{
+    flex-direction: column;
+    margin-top: 10%;
+  }
+
+  .userjourney-img {
+    margin: 0 auto;
+  }
+  .verbesserung-row{
+    margin: 0 0 25% 0;
+  }
+
+  .retention-content{
+    flex-direction: column;
+  }
+
+  .retention-knopf{
+    padding:15px
+  }
+
+  .dropdown-box{
+    width:100%;
+  }
+
+  .imageBig{
+    width:100%
+  }
   #img-guy{
     display: none
   }
@@ -1793,5 +1864,9 @@ div #duo-party{
     left: 70%;
     width: 100px;
     top: 35px;
+  }
+
+  .about{
+    padding: 25% 3vh;
   }
 }

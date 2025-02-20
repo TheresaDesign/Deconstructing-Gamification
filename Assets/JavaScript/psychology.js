@@ -11,7 +11,7 @@ var scroller = scrollama();
 // generic window resize listener event
 function handleResize() {
     // 1. Entferne die feste Höhe der Steps, damit sie sich dem Inhalt anpassen
-    step.style("height", "auto");
+    step.style("height", "100vh");
 
     // 2. update height und margin für figure
     var figureHeight = window.innerHeight / 1.5; // Höhe der Grafik

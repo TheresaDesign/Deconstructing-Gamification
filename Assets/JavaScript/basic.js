@@ -259,30 +259,33 @@ updateContent();
 
 
 // Javascript für das scrollen des GUIs
-let scale = 1; // Startzoom-Wert (nach oben verschoben)
+let scale = 1; // Start-Zoom-Wert
 
 window.addEventListener("load", function () {
   setTimeout(() => {
-    const box = document.getElementById("scrollBox");
+    const box = document.getElementById("side-box-image");
     if (box) {
-      centerScrollPosition(box);
+      centerScrollPosition();
     } else {
       console.error("scrollBox nicht gefunden!");
     }
   }, 100);
 });
 
-function centerScrollPosition(box) {
+function centerScrollPosition() {
+  const box = document.getElementById("scrollBox");
   const gui = document.getElementById("gui-mobile");
 
-  if (!gui) {
-    console.error("gui-mobile nicht gefunden!");
+  if (!box || !gui) {
+    console.error("Elemente nicht gefunden!");
     return;
   }
 
-  const scaledWidth = gui.scrollWidth * scale;
-  const scaledHeight = gui.scrollHeight * scale;
+  // Echte Abmessungen des Elements mit Skalierung berechnen
+  const scaledWidth = gui.offsetWidth * scale;
+  const scaledHeight = gui.offsetHeight * scale;
 
+  // Setze die Scroll-Position, um das Element mittig zu platzieren
   box.scrollLeft = (scaledWidth - box.clientWidth) / 2;
   box.scrollTop = (scaledHeight - box.clientHeight) / 2;
 }
@@ -300,26 +303,23 @@ function zoomOut() {
 function resetZoom() {
   scale = 1;
   applyZoom();
-
-  setTimeout(() => {
-    const box = document.getElementById("scrollBox");
-    if (box) {
-      centerScrollPosition(box);
-    }
-  }, 50);
 }
 
 function applyZoom() {
   const gui = document.getElementById("gui-mobile");
+  const box = document.getElementById("scrollBox");
+
+  if (!gui || !box) return;
+
+  // Setze die Skalierung
   gui.style.transform = `scale(${scale})`;
   gui.style.transformOrigin = "center";
 
-  // Nach dem Zoomen erneut scrollen
-  setTimeout(() => {
-    const box = document.getElementById("scrollBox");
-    centerScrollPosition(box);
-  }, 50);
+  // Stelle sicher, dass die Mitte nach dem Zoomen korrekt bleibt
+  setTimeout(centerScrollPosition, 50);
 }
+
+
 
 
 //dropdown boxen
@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const knoepfe = document.querySelectorAll(".retention-knopf");
 
   knoepfe.forEach((knopf) => {
-    const button = knopf.querySelector("h4");
+    const button = knopf.querySelector("h4","retention.content");
     const content = knopf.querySelector(".retention-content");
     const images = knopf.querySelectorAll(".retention-img img");
     const buttons = knopf.querySelectorAll(".retention-content button");
