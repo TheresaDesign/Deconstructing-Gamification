@@ -100,7 +100,8 @@ h2{
 h3{
   font-family: "Nunito", sans-serif;
   font-weight: 800;
-  font-size: 27px;
+  font-size: 25px;
+  color: var(--of_Black);
   margin: 0;
 }
 #thin{
@@ -111,6 +112,7 @@ h4{
   font-weight: 800;
   font-size: 18px;
   margin: 0;
+  color: var(--of_Black);
 }
 
 h5{
@@ -118,6 +120,7 @@ h5{
   font-weight: 800;
   font-size: 18px;
   margin: 1rem 0 -1rem;
+  color: var(--of_Black);
 }
 
 p,ul {
@@ -220,10 +223,9 @@ header{
 .menu-box{
   display: flex;
   flex-direction: row;
-  background-color: var(--grey3);
+  background-color: var(--white);
   color: var(--grey1);
-  border-radius: 5px;
-  box-shadow: 0px 4px 0px 0px var(--grey2);
+  border-radius: 15px;
   padding: 8px 17px 8px 15px;
   gap: 10px;
   align-items: center;
@@ -241,8 +243,8 @@ header{
 
 .menu{
   gap: 10px;
+  margin-left: 25%;
 }
-
 .menu-introduction:hover {
   background-color: var(--green_light);
   box-shadow: 0px 4px 0px 0px var(--green_dark);
@@ -415,9 +417,13 @@ header{
 }
 
 .line{
-  flex-basis: 250%;
+  flex-basis: 40%;
   border-radius: 2px;
   height: 3px;
+}
+
+.title svg{
+  flex-basis: 20%;
 }
 
 .fine-line{
@@ -995,15 +1001,15 @@ width:15px;
 
 .dossier .dossier-text {
   visibility: hidden;
-  width: min(300px, fit-content);
-  min-width: 120px;
+  width: max-content;
+  padding: 5px 10px;
+  max-width: 300px;
   font-size: 15px;
   background-color: var(--white);
   border: 2px solid var(--blue);
   box-shadow: 0px 2px 0px 0px var(--blue);
   color: var(--grey1);
   text-align: center;
-  padding: 5px;
   border-radius: 5px;
 
   position: absolute;
@@ -1699,10 +1705,6 @@ border-radius: 0 0 40px 40px;
 
   .intro-box{
     padding: 30px 0;
-  }
-
-  .line{
-    flex-basis: 100%;
   }
 
   .button-big{
