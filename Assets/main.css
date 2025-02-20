@@ -28,8 +28,8 @@
   font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-display: swap;
-  src: url('Nunito/Nunito-Light.ttf') format('truetype');
+  src: url('/Assets/Nunito/ttf/Nunito-Light.ttf') format('truetype'),
+  url('/Assets/Nunito/woff/Nunito-Light.woff2') format('woff2');
 }
 
 @font-face {
@@ -42,44 +42,37 @@
 }
 
 @font-face {
-  font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
-  src: url('Nunito/Nunito-Medium.ttf') format('truetype');
+  src: url('/Assets/Nunito/ttf/Nunito-Medium.ttf') format('truetype'),
+  url('/Assets/Nunito/woff/Nunito-Medium.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
-  src: url('Nunito/Nunito-Bold.ttf') format('truetype');
+  src: url('/Assets/Nunito/ttf/Nunito-Bold.ttf') format('truetype'),
+  url('/Assets/Nunito/woff/Nunito-Bold.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: url('Nunito/Nunito-ExtraBold.ttf') format('truetype');
+  src: url('/Assets/Nunito/ttf/Nunito-ExtraBold.ttf') format('truetype'),
+  url('/Assets/Nunito/woff/Nunito-ExtraBold.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Nunito';
   font-style: normal;
   font-weight: 900;
-  font-display: swap;
-  src: url('Nunito/ttf/Nunito-Black.ttf') format('truetype');
+  src: url('/Assets/Nunito/ttf/Nunito-Black.ttf') format('truetype'),
+  url('/Assets/Nunito/woff/Nunito-Black.woff2') format('woff2');
 }
 
-@font-face {
-  font-family: "Nunito",sans-serif;
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url('.../Nunito/Nunito-MediumItalic.ttf') format('truetype');
-}
   @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:wght@600&family=Rokkitt:wght@266;400;600&display=swap');
 
   
@@ -90,7 +83,7 @@ h1{
 
 h2{
     font-family: 'Nunito', sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: lowercase;
     font-size: 40px;
     text-align: center;
@@ -99,7 +92,7 @@ h2{
 
 h3{
   font-family: "Nunito", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 25px;
   color: var(--of_Black);
   margin: 0;
@@ -109,7 +102,7 @@ h3{
 }
 h4{
   font-family: "Nunito", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
   margin: 0;
   color: var(--of_Black);
@@ -117,7 +110,7 @@ h4{
 
 h5{
   font-family: "Nunito", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
   margin: 1rem 0 -1rem;
   color: var(--of_Black);
