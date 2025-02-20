@@ -397,6 +397,44 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCarousel();
 });
 
+//verbesserung2
+document.addEventListener("DOMContentLoaded", function () {
+  const verbesserung = document.querySelectorAll(".verbesserung-content2");
+  const vorButton = document.getElementById("zurück");
+  const nachButton = document.getElementById("nächstes");
+  let currentIndex = 0;
+
+  // Anfangszustand setzen
+  function updateCarousel() {
+    verbesserung.forEach((content, index) => {
+      content.style.display = index === currentIndex ? "flex" : "none";
+    });
+
+    // Buttons aktivieren/deaktivieren
+    vorButton.disabled = currentIndex === 0;
+    nachButton.disabled = currentIndex === verbesserung.length - 1;
+  }
+
+  // Event Listener für Buttons
+  vorButton.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  nachButton.addEventListener("click", function () {
+    if (currentIndex < verbesserung.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  // Initiales Update ausführen
+  updateCarousel();
+});
+
+
 //retention
 document.addEventListener("DOMContentLoaded", function () {
   const knoepfe = document.querySelectorAll(".retention-knopf");
