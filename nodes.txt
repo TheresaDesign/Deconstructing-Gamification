@@ -1,22 +1,15 @@
-Problems:
-Webside:
-  - spacing in the psychology part is wierd
+
 
 General to dos:
 Fonts nicht mehr über link sondern lokal einbetten
-icon für tabsorgen, dass die Texte aufeinander aufbauen
-  auf die Bilder eingehen
+
 
 
 About page: Methodik nochmal genauer: Methodische Details: Erwähnen Sie kurz alle Tools, Rahmenwerke oder Methoden, die in der Analyse verwendet werden (z. B. UI Ripping, Benutzerumfragen).
 
-
-- einheitliches spacing
-- zoom in zoom out buttons
-
 Kleinigkeiten:
 wenn man Buttons drückt, springen manchmal die Boxen in ihrer Größe
-transition bei retention
+
 
 https://uclab.fh-potsdam.de/mapping/machtmietenarm/
 

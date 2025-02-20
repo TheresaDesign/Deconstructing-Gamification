@@ -11,15 +11,15 @@ var scroller = scrollama();
 // generic window resize listener event
 function handleResize() {
     // 1. Entferne die feste Höhe der Steps, damit sie sich dem Inhalt anpassen
-    step.style("height", "100vh");
+    step.style("height", "auto");
 
     // 2. update height und margin für figure
     var figureHeight = window.innerHeight / 1.5; // Höhe der Grafik
-    var figureMarginTop = window.innerHeight * 0.15; // Margin oben auf 15%
+    var figureMarginTop = 15; // Margin oben auf 15%
 
     figure
         .style("height", figureHeight + "px")
-        .style("top", figureMarginTop + "px");
+        .style("top", figureMarginTop + "vh");
 
     // 3. tell scrollama to update new element dimensions
     scroller.resize();

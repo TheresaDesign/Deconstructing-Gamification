@@ -496,3 +496,30 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImage(); // Initial setzen
   });
 });
+
+
+
+//wheel overlay
+document.addEventListener("DOMContentLoaded", function () {
+  const showWheelBtn = document.querySelector(".show-wheel");
+  const overlay = document.getElementById("wheelOverlay");
+  const closeOverlayBtn = document.querySelector(".close-overlay");
+
+  // Overlay sicherstellen, dass es standardmäßig ausgeblendet ist
+  overlay.style.display = "none";
+
+  showWheelBtn.addEventListener("click", function () {
+    overlay.style.display = "flex";
+  });
+
+  closeOverlayBtn.addEventListener("click", function () {
+    overlay.style.display = "none";
+  });
+
+  // Klick außerhalb des Bildes schließt das Overlay
+  overlay.addEventListener("click", function (event) {
+    if (event.target === overlay) {
+      overlay.style.display = "none";
+    }
+  });
+});
