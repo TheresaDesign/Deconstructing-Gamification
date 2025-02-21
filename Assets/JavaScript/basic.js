@@ -186,31 +186,31 @@ const texts = [
     id: "performance",
     title: "Performance / Measurements",
     content: "All elements within this dimension provide some form of feedback to the user. Whether it's a progress bar within a course or the hearts indicating how many mistakes have been made—this dimension ensures the user receives constant feedback. If missing, learners may feel disoriented, as their actions lack visible responses.",
-    usage: "5/5 elements are heavily used by Duolingo"
+    usage: "5/5 elements are heavily"
   },
   {
     id: "ecological",
     title: "Ecological",
     content: "The relevance of this dimension heavily depends on the application or game in question. These elements represent unique characteristics that some games incorporate, while others may not, or they may implement them in entirely different ways. If this dimension is absent, the game environment may feel static, reducing engagement as it lacks meaningful interaction with the user.",
-    usage: "3/5 elements are moderately used by Duolingo"
+    usage: "3/5 elements are moderately"
   },
   {
     id: "social",
     title: "Social",
     content: "This dimension focuses on interaction between players. Its elements are designed to encourage engagement and communication. If there is no opportunity or necessity for users to interact with one another, long-term isolation may occur, which can hinder the learning experience. This category supports both extrinsic motivation and intrinsic motivation, as social exchange is particularly important in a learning context.",
-    usage: "4/4 elements are widely used by Duolingo"
+    usage: "4/4 elements are widely"
   },
   {
     id: "personal",
     title: "Personal",
     content: "This dimension revolves around how a user engages with their environment and to what extent they can personalize and shape it. If missing, it can lead to demotivation, as the user's actions within the game lack personal impact or purpose.",
-    usage: "5/5 elements are heavily used by Duolingo"
+    usage: "5/5 elements are heavily"
   },
   {
     id: "fictional",
     title: "Fictional Engagement",
     content: "This dimension is about creating context. It considers both the user’s perspective (narrative) and the environment (storytelling) to form a cohesive experience. If this dimension—or even just one of its elements—is missing, the sense of meaning and purpose within the immersive environment is lost. This, in turn, affects the overall quality of the user experience.",
-    usage: "0/2 elements are used by Duolingo"
+    usage: "0/2 elements are "
   }
 ];
 
@@ -437,10 +437,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //retention
 document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".retention-buttons"); // Die Flexbox um alle Elemente
   const knoepfe = document.querySelectorAll(".retention-knopf");
 
   knoepfe.forEach((knopf) => {
-    const button = knopf.querySelector("h4","retention.content");
+    const button = knopf.querySelector("h4"); // Korrigierte Selektion
     const content = knopf.querySelector(".retention-content");
     const images = knopf.querySelectorAll(".retention-img img");
     const buttons = knopf.querySelectorAll(".retention-content button");
@@ -448,10 +449,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextButton = buttons[1];
     let currentIndex = 0;
 
-    // Öffnen/Schließen der Content-Box
+    // Öffnen/Schließen der Content-Box und Umsortierung in der Flexbox
     button.addEventListener("click", function (event) {
       event.stopPropagation();
-      content.style.display = content.style.display === "flex" ? "none" : "flex";
+      const isOpen = content.style.display === "flex";
+
+      // Schließt alle anderen offenen Boxen
+      knoepfe.forEach((k) => k.querySelector(".retention-content").style.display = "none");
+
+      // Zeigt den geklickten an oder versteckt ihn
+      content.style.display = isOpen ? "none" : "flex";
+
+      // Falls geöffnet, ans Ende der Flexbox verschieben
+      if (!isOpen) {
+        container.appendChild(knopf);
+      }
     });
 
     // Schließen bei Klick außerhalb
