@@ -307,7 +307,7 @@ function resetZoom() {
 
 function applyZoom() {
   const gui = document.getElementById("gui-mobile");
-  const box = document.getElementById("scrollBox");
+  const box = document.getElementById("gui-mobile");
 
   if (!gui || !box) return;
 

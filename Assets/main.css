@@ -1413,6 +1413,7 @@ flex-shrink: 0;
 
 .userjourney-img{
   width: 24%;
+  z-index: -1;
 }
 .controls {
   margin-top: 10px;
@@ -1722,6 +1723,64 @@ div #duo-party{
   width: inherit;
 }
 
+@media screen and (max-width: 700px) {
+  .wheel-container{
+    display: none;
+  }
+  .show-wheel{
+  display: inline-block; 
+  }
+
+
+  .box-elementpic{
+    display: flex;
+  }
+
+  .element-image {
+    display: none; /* Bild verstecken */
+}
+.elementpic {
+  display: block; /* Button anzeigen */
+}
+
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-video {
+display: none; /* Standardmäßig versteckt */
+max-width: 90%;
+max-height: 90vh;
+border-radius: 10px;
+}
+
+.wheel-graphic{
+display: none;
+}
+
+.wheel-text{
+flex-basis: 100%;
+}
+
+.wheel-information{
+height: fit-content;
+margin: 30px 0;
+}
+/*
+#elements{
+
+  overflow: hidden;
+}*/
+
+#psycho{
+
+  overflow: hidden;
+}
+}
+
+
 @media screen and (max-width: 500px){
 
   .firstimg{
@@ -1773,22 +1832,13 @@ border-radius: 0 0 40px 40px;
     padding: 6px 12px;
     box-shadow: 0px 3.5px 0px 0px var(--green_dark);
   }
-  .wheel-container{
-    display: none;
-  }
-  .show-wheel{
-  display: inline-block; 
-  }
+ 
   .button-skip{
     top: 92vh;
   }
 
   .findings_gui{
     margin-top: 5vh;
-  }
-
-  .userjourney-container{
-    height: 100vh;
   }
 
   .userjourney-avatar{
@@ -1854,16 +1904,6 @@ border-radius: 0 0 40px 40px;
     display: flex;
   }
 
-  .box-elementpic{
-    display: flex;
-  }
-
-  .element-image {
-    display: none; /* Bild verstecken */
-}
-.elementpic {
-  display: block; /* Button anzeigen */
-}
 
 .left{
   padding: 3px 8px 0px 8px;
@@ -1893,30 +1933,6 @@ border-radius: 0 0 40px 40px;
     z-index: 1000;
   }
 
-  .modal-image {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.modal-video {
-  display: none; /* Standardmäßig versteckt */
-  max-width: 90%;
-  max-height: 90vh;
-  border-radius: 10px;
-}
-
-.wheel-graphic{
-  display: none;
-}
-
-.wheel-text{
-  flex-basis: 100%;
-}
-
-.wheel-information{
-  height: fit-content;
-  margin: 30px 0;
-}
   #GUIcontainer{
     display: none;
   }
