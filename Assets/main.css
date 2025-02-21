@@ -738,7 +738,7 @@ z-index: 4;
   text-decoration: none; 
   display: inline-block; 
   cursor: pointer;
-  margin: 3% 0;
+  margin: 0% 0 8% 0;
 }
 
 .show-wheel {
@@ -1401,7 +1401,7 @@ button:disabled {
   gap:4%;
 }
 .userjourney-avatar{
-  width: 20%;
+  width: 16%;
 flex-shrink: 0;
 }
 .uj-bubble{
@@ -1412,8 +1412,7 @@ flex-shrink: 0;
 }
 
 .userjourney-img{
-  width: 30%;
-  height: fit-content;
+  width: 24%;
 }
 .controls {
   margin-top: 10px;
