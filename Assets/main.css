@@ -1271,7 +1271,7 @@ figure p {
 }
 .step{
   position: relative;
-  margin-top: 50px;
+  margin-top: 20%;
 }
 
 .step:last-child {
